@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Module (CSS and CSS 3) -2</h1>
+    <ol>
+        <li>
+            <h3>What are the benefits of using CSS?</h3>
+        </li>
+        <p><b>-Separation of Content and Style</b><br>
+            One of the most significant advantages of CSS is its ability to separate content from presentation. This
+            separation enhances the maintainability of web pages as changes to the styling can be made without altering
+            the underlying HTML structure. This also promotes a cleaner, more organized codebase.</p>
+        <p><b>-Consistency</b><br>CSS enables consistent styling across an entire website or multiple pages. This is one
+            of
+            the many advantages of using CSS. By creating a single external CSS file and linking it to multiple web
+            pages, you ensure a uniform look and feel. This reduces redundancy and makes it easier to update styling
+            elements globally.</p>
+        <p><b>-Faster Loading Times</b><br>External CSS files can be cached by web browsers, allowing them to load
+            faster on
+            subsequent visits. This results in a better user experience, especially for returning visitors.</p>
+        <p><b>-Responsive Design</b><br>With CSS, you can create responsive web designs that adapt to different screen
+            sizes
+            and devices. This is another main one among advantages of cascading style sheets. This is crucial in the era
+            of mobile browsing, as it ensures your website looks and functions well on various platforms.</p>
+        <p><b>- Ease of Maintenance</b><br>Modifying the appearance of a website is more straightforward with CSS. You
+            can quickly make changes to fonts, colors, and layouts by updating a few lines of code in the CSS file,
+            rather than manually editing each HTML element. </p>
+        <p><b>-Accessibility</b><br>CSS allows developers to improve web accessibility by controlling the presentation
+            of content. Properly structured CSS can make a website more accessible to individuals with disabilities,
+            enhancing inclusivity.</p>
+        <p><b>-Animations and Effects</b><br>CSS allows for animations and transitions, enhancing the user experience.
+            You can create interactive elements without relying on JavaScript or other scripting languages. </p>
+        <li>
+            <h3>What are the disadvantages of CSS?
+            </h3>
+        </li>
+        <p><b>-Browser Compatibility</b><br>CSS may render differently in various web browsers, leading to
+            inconsistencies in the visual presentation. Developers often need to write browser-specific CSS code or use
+            vendor prefixes to ensure compatibility. </p>
+        <p><b>-Learning Curve</b><br>One among the main disadvantages of cascading style sheets is that while it is
+            essential for web development, it can be complex, especially for beginners. Mastering CSS requires
+            understanding selectors, properties, values, and the box model, which can be overwhelming. </p>
+        <p><b>-Lack of Security</b><br>CSS itself does not offer security features, and it can be vulnerable to attacks
+            like Cross-Site Scripting (XSS) when used inappropriately. Developers must be cautious when implementing CSS
+            to prevent security risks. </p>
+        <p><b>-Maintenance Challenges</b><br>As websites grow and evolve, maintaining and refactoring CSS can become
+            complex and time-consuming. It's crucial to follow best practices and use naming conventions to keep styles
+            manageable. </p>
+        <li>
+            <h3>What is the difference between CSS2 and CSS3?</h3>
+        </li>
+        <p><img src="https://cdn-eaocj.nitrocdn.com/bRrUvINWEqyoXCOGVIRtXKCAELdOwonU/assets/images/optimized/rev-70b1f5e/nimapinfotech.com/wp-content/uploads/2019/05/css2_vs_cc3.png"
+                alt="" height="800px" width="700px"></p>
+        <li>
+            <h3> Name a few CSS style components</h3>
+        </li>
+        <p>At its most basic level, CSS consists of two components: <br>
+            -Properties: These are human-readable identifiers that indicate which stylistic features you want to modify.
+            For example, font-size, width, background-color. <br>
+            -Values: Each property is assigned a value. This value indicates how to style the property. <br>
+            The example below highlights a single property and value. The property name is color and the value is blue.
+            <br>
+            <img width="350px"
+                src="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured/declaration.png"
+                alt="">
+        </p>
+        <li>
+            <h3>What do you understand by CSS opacity?</h3>
+        </li>
+        <p>The opacity CSS property sets the opacity of an element. Opacity is the degree to which content behind an
+            element is hidden, and is the opposite of transparency.
+            <br>
+            A <code>&lt;number&gt;</code> in the range 0.0 to 1.0, inclusive, or a <code>&lt;percentage&gt;</code> in
+            the range 0% to 100%, inclusive,
+            representing the opacity of the channel (that is, the value of its alpha channel). Any value outside
+            the interval, though valid, is clamped to the nearest limit in the range.
+            <br>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Value</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>0</code></td>
+                    <td>The element is fully transparent (that is, invisible).</td>
+                </tr>
+                <tr>
+                    <td>Any <a href="/en-US/docs/Web/CSS/number"><code>&lt;number&gt;</code></a> strictly <br> between
+                        <code>0</code> and <code>1</code>
+                    </td>
+                    <td>The element is translucent (that is, content behind the element can be seen).</td>
+                </tr>
+                <tr>
+                    <td><code>1</code> (default value)</td>
+                    <td>The element is fully opaque (visually solid).</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        Example : <br><code>opacity: 0.9; <br>
+            opacity: 90%; <br>
+            </code></p>
+        <li>
+            <h3> How can the background color of an element be changed?
+            </h3>
+        </li>
+        <p>The background-color property of CSS is used to set the background of an element. We can set background color
+            by selecting the element by its class name of id name and then apply the background-color property on it to
+            set the background color.
+            <br>
+            Example: p {
+            background-color: pink;
+            }
+        </p>
+        <li>
+            <h3>How can image repetition of the backup be controlled?
+            </h3>
+        </li>
+        <p>This task can be achieved by using the background-repeat property that will help us to control the repetition
+            of the image. The background-repeat property in CSS is used to repeat the background image both horizontally
+            and vertically. It also decides whether the background image will be repeated or not.
+            <br>
+            <b>Syntax</b> : background-repeat: repeat|repeat-x|repeat-y|no-repeat|initial|inherit;<br>
+            <b>Example :</b> <br> background-image: url(
+            "https://media.geeksforgeeks.org/wp-content/uploads/geeks-25.png");<br>
+            background-repeat: repeat-x;<br>
+            background-size: 150px 100px;
+        </p>
+        <li>
+            <h3>What is the use of the background-position property?</h3>
+        </li>
+        <p>The background-position CSS property sets the initial position for each background image. The position is
+            relative to the position layer set by background-origin.
+            <br><b>Syntax:</b>
+            background-position: value;
+        <ul>
+            <li><strong>background-position: left top:</strong> This property is used to set the image at the left top.
+            </li>
+            <li><strong>background-position: left center :</strong>This property is used to set the image at the left
+                center.</li>
+            <li><strong>background-position: left bottom;</strong> This property is used to set the image at the left
+                bottom.</li>
+            <li><strong>background-position: center top;</strong> This property is used to set the image at the center
+                top position.</li>
+            <li><strong>background-position: center center;</strong> This property is used to set the image at the
+                center center position.</li>
+            <li><strong>background-position: center bottom;</strong> This property is used to set the image at the
+                center bottom position.</li>
+            <li><strong>background-position: right top;</strong> This property is used to set the image at the right top
+                position.</li>
+            <li><strong>background-position: right center;</strong> This property is used to set the image at the right
+                center position.</li>
+            <li><strong>background-position: right bottom;</strong> This property is used to set the image at the right
+                bottom position.</li>
+            <li><strong>background-position: 25% 75%:</strong> This property is used to set the image at 25% from the
+                left and 75% from the top.
+                <ul>
+                    <li><strong>Note:</strong> For x%y% notation, here x% denotes the horizontal position &amp; y%
+                        denotes the vertical position with respect to the initial position i.e, left top.</li>
+                </ul>
+            </li>
+            <li><strong>background-position: 30px 80px;</strong>: This property is used to set the image at the 30px
+                from left and 80px from top.
+                <ul>
+                    <li><strong>Note</strong>: For x-pos y-pos notation, here the units are represented in pixels or any
+                        other CSS units.&nbsp;</li>
+                </ul>
+            </li>
+        </ul>
+        </p>
+        <li>
+            <h3>Which property controls the image scroll in the background?
+            </h3>
+        </li>
+        <p>The background-attachment property in CSS is used to specify the kind of attachment of the background image
+            with respect to its container. It can be set to scroll or make it remain fixed. It can be applied to all
+            HTML elements.
+            <br>
+            <b>Syntax:</b>
+            background-attachment: scroll|fixed|local|initial|inherit;
+            <br>
+            <b>Example:</b> <br>
+            #example { <br>
+            background-image:
+            url("https://media.geeksforgeeks.org/wp-content/uploads/geeks-25.png"); <br>
+            background-position: center; <br>
+            background-repeat: no-repeat; <br>
+            background-attachment: fixed; <br>
+            }
+        </p>
+        <li>
+            <h3>Why should background and color be used as separate properties?</h3>
+        </li>
+        <p>
+        <ul>
+            <li>color is referring to the text color in that element.</li>
+            <br>
+            <li>background-color refers to the background color</li>
+            <br>
+            <li>background is shorthand to combine many background tags into one line.
+            </li><br>
+            <b>Example : </b>background: #ffffff url("img_tree.png") no-repeat right top;
+        </ul><br>
+        </p>
+        <li>
+            <h3>
+                How to center block elements using CSS1?
+            </h3>
+        </li>
+        <p></p>
+        <li>
+            <h3>How to maintain the CSS specifications?</h3>
+        </li>
+        <p>The Specification defines how CSS properties should be implemented by browser vendors along with detailed
+            algorithms, code samples and tabular information.
+            <br>
+            The Specification also include:
+        <ul>
+            <li> The syntax and data types of the language</li>
+            <li>Detailed explanation on CSS Selectors</li>
+            <li>How you can assign values to properties</li>
+            <li>The Cascade (the "C" in CSS)</li>
+            <li>How inheritance works</li>
+            <li>The Box Model e.t.c</li>
+        </ul>
+        </p>
+        <li>
+            <h3>What are the ways to integrate CSS as a web page?</h3>
+        </li>
+        <p>There are three ways of inserting a style sheet:
+            <br>
+            -External CSS <br>
+            -Internal CSS <br>
+            -Inline CSS <br>
+            <b>External CSS</b><br>
+            With an external style sheet, you can change the look of an entire website by changing just one file!
+            <br>
+            Each HTML page must include a reference to the external style sheet file inside the &lt;link&gt; element,
+            inside the head section.
+            <br>
+            <b>Example : </b>
+            External styles are defined within the
+            &lt;link&gt; element, inside the
+
+            &lt;head&gt; section of an HTML page: <br>
+            <code>&lt;head&gt;
+                &lt;link rel="stylesheet" href="mystyle.css"&gt;
+                &lt;/head&gt;
+            </code>
+            <br>
+            <b>Internal CSS</b><br>
+            An internal style sheet may be used if one single HTML page has a unique style.
+            <br>
+            The internal style is defined inside the &lt;style&gt;ss element, inside the head section.
+            <br>
+            <b>Example</b>
+            Internal styles are defined within the &lt;style&gt; element, inside the
+
+            <head> section of an HTML page:<br>
+                <code>
+                &lt;head&gt;
+                    &lt;style&gt;
+                    body {
+                      background-color: linen;
+                    }
+                    
+                    h1 {
+                      color: maroon;
+                      margin-left: 40px;
+                    }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+            </code>
+                <br>
+                <b>Inline CSS</b><br>
+                An inline style may be used to apply a unique style for a single element.
+                <br>
+                To use inline styles, add the style attribute to the relevant element. The style attribute can contain
+                any CSS. <br>
+                <b>Example</b><br>
+                <code>
+                    &lt;h1 style="color:blue;text-align:center;"&gt;This is a heading&lt;h1&gt;<br>
+                    &lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;
+                </code>
+        </p>
+        <li>
+            <h3>What is embedded style sheets?</h3>
+        </li>
+        <p><b>Embedded Stylesheet:</b><br> It allows you to define styles for a particular HTML document as a whole in
+            one place. This is done by embedding the &lt;style&gt;&lt;/style&gt; tags containing the CSS properties in
+            the head of your document. Embedded style sheets are particularly useful for HTML documents that have unique
+            style requirements from the rest of the documents in your project. However, if the styles need to be applied
+            across multiple documents, you should link to an external style sheet instead of using individual embedded
+            style sheets. Using embedded stylesheets holds a distinct advantage over inline styles which only allow you
+            to address one HTML element at a time.
+            <br>
+            <b>Syntax:</b><br> The CSS syntax for embedded style sheets is exactly the same as other CSS code, apart
+            from the fact that it is now wrapped within the &lt;style&gt;&lt;/style&gt; tags. The &lt;style&gt; tag
+            takes the ‘type’ attribute that defines the type of style sheet being used (ie. text/CSS).
+            <br>
+            <code>
+                &lt;head&gt;
+                    &lt;style&gt;
+                    body {
+                      background-color: linen;
+                    }
+                    
+                    h1 {
+                      color: maroon;
+                      margin-left: 40px;
+                    }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+            </code>
+        </p>
+        <li>
+            <h3>What are the external style sheets?</h3>
+        </li>
+        <p><b>External CSS</b><br>
+            With an external style sheet, you can change the look of an entire website by changing just one file!
+            <br>
+            Each HTML page must include a reference to the external style sheet file inside the &lt;link&gt; element,
+            inside the head section.
+            <br>
+            <b>Example : </b>
+            External styles are defined within the
+            &lt;link&gt; element, inside the
+
+            &lt;head&gt; section of an HTML page: <br>
+            <code>&lt;head&gt;
+                &lt;link rel="stylesheet" href="mystyle.css"&gt;
+                &lt;/head&gt;
+            </code>
+        </p>
+        <li>
+            <h3>What are the advantages and disadvantages of using external style sheets?
+            </h3>
+        </li>
+        <p><b>The advantages of External Style Sheets are as follows :</b>
+            <br>
+            -With the help of External Style Sheets, the styles of numerous documents can be organized from one single
+            file. <br>
+            -In External Style Sheets, Classes can be made for use on numerous HTML element types in many forms of the
+            site. <br>
+            -In complex contexts, Methods like selector and grouping can be implemented to apply styles. <br>
+            <b>The disadvantages of External Style Sheets are as follows :</b>
+            <br>
+            -An extra download is essential to import style information for each file. <br>
+            -The execution of the file may be deferred till the external style sheet is loaded. <br>
+            -While implementing style sheets, we need to test Web pages with multiple browsers in order to check
+            compatibility issues.
+        </p>
+        <li>
+            <h3>What is the meaning of the CSS selector?</h3>
+        </li>
+        <p>A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the
+            browser which HTML elements should be selected to have the CSS property values inside the rule applied to
+            them.</p>
+        <li><h3>What are the media types allowed by CSS?</h3></li>
+        <p></p>
+        <li><h3>What is the rule set?</h3></li>
+        <p></p>
+    </ol>
+
+    <p><b>-</b><br> </p>
+</body>
+
+</html>
