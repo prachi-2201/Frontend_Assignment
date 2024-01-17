@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-decoration: underline;
+            color: darkgreen;
+        }
+
+        .note {
+            font-size: 12px;
+            color: red;
+        }
+
+        h1,
+        .note {
+            margin-top: 20px;
+            margin-left: 5px;
+        }
+
+        .qa-container {
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 20px 20px 10px;
+            box-sizing: border-box;
+        }
+
+        .question {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .answer {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 8px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Js Assignment</h1>
+    <p class="note">Note : CLick on questions to view ansers</p>
+    <div class="qa-container">
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(1)">Q.1 What is JavaScript. How to use it?</div>
+            <div class="answer" id="answer1">
+                JavaScript is
+                a scripting or programming language that allows you to implement complex features on web pages — every
+                time a web page does more than just sit there and display static information for you to look at —
+                displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes,
+                etc.
+                <br><br>
+                JavaScript is the most widely used client-side programming language
+                <br><br>
+                <ol>
+                    <li>JavaScripts are programming codes that are embedded inside an HTML document. The codes are
+                        contained between a pair of <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code> tags,
+                        as follows:
+                        <pre class="syntax">
+                            &lt;script&gt;
+                                <span class="comment">// Your JavaScript programming codes here!</span>
+                            &lt;/script&gt;
+                        </pre>
+                        NOTE: In HTML4/XHTML, you need to include attribute <code>type="text/JavaScript"</code> to the
+                        <code>&lt;script&gt;</code> opening tag.
+                    </li>
+
+                    <li>You could place the scripts in either the <code>HEAD</code> section (called header script) or
+                        <code>BODY</code> section (called body script) of an HTML document. You are free to embed as
+                        many scripts into a single document as you like, using multiple
+                        <code>&lt;script&gt;...&lt;/script&gt;</code> elements.
+                    </li>
+
+                    <li>JavaScript statements are terminated by a semicolon <code>';'</code> (like Java/C/C++/C#).</li>
+
+                </ol>
+
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(2)">Q.2 How many type of Variable in JavaScript? </div>
+            <div class="answer" id="answer2">
+                You can declare a variable in two ways:
+                <ul>
+                    <li>With the keyword <a href="#"><code>var</code></a>. For
+                        example, <code>var x = 42</code>. This syntax can be used to declare both <strong>local</strong>
+                        and <strong>global</strong> variables, depending on the <em>execution context</em>.
+                    </li>
+                    <li>With the keyword <a href="#"><code>const</code></a> or <a href="#"><code>let</code></a>. For
+                        example, <code>let y = 13</code>. This syntax can be used to declare a block-scope local
+                        variable.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(3)">Q.3 Define a Data Types in js?</div>
+            <div class="answer" id="answer3">
+                <ul>
+                    <li> <b> Number </b></li>
+                    -The number type represents both integer and floating point numbers.
+                    <br>
+                    <code>let n = 123;</code>
+                    <li> <b> BigInt </b></li>
+                    -A BigInt value is created by appending n to the end of an integer.
+                    <br>
+                    <code>const bigInt = 1234567890123456789012345678901234567890n;</code>
+                    <li> <b> String </b></li>
+                    -A string in JavaScript must be surrounded by quotes.
+                    <ol>
+                        <li>Double quotes: <code>"Hello"</code>.</li>
+                        <li>Single quotes: <code>'Hello'</code>.</li>
+                        <li>Backticks: <code>`Hello`</code>.</li>
+                    </ol>
+                    -Double and single quotes are “simple” quotes. There’s practically no difference between them in
+                    JavaScript.
+                    -Backticks are “extended functionality” quotes. They allow us to embed variables and expressions
+                    into a string by wrapping them in ${…}.
+                    <br>
+                    <code>
+                        let str = "Hello";
+                        let str2 = 'Single quotes are ok too';
+                        let phrase = `can embed another ${str}`;
+                    </code>
+                    <li> <b> Boolean (logical type) </b></li>
+                    -The boolean type has only two values: true and false.
+                    <code>let nameFieldChecked = true; // yes, name field is checked
+                        let ageFieldChecked = false; // no, age field is not checked</code>
+                    <li> <b> The “null” value </b></li>
+                    -The special null value does not belong to any of the types described above.
+                    -It forms a separate type of its own which contains only the null value.
+                    <br>
+                    <code>let age = null;</code>
+                    <li> <b> The “undefined” value </b></li>
+                    -The special value undefined also stands apart. It makes a type of its own, just like null.
+                    -The meaning of undefined is “value is not assigned”.
+                    <br>
+                    <code>
+                        let age;
+                        alert(age);
+                    </code>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(4)">Q.4 Write a mul Function Which will Work Properly When
+                invoked With Following Syntax.
+            </div>
+            <div class="answer" id="answer4">
+                -The MUL function is a miniature of the multiplication function. In this
+                function, we call the function that required an argument as a first number, and that function calls
+                another function that required another argument and this step goes on.
+                <br>
+                -The first function’s argument is x, the second function`s argument is y and the third is z, so the
+                return value will be xyz.
+                <br>
+                <code><pre>
+                    function mul(x) {
+                        return function (y) {
+                          return function (z) {
+                            return x * y * z;
+                          };
+                        };
+                      }
+                </pre></code>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(5)">Q.5 What the deference between undefined and undeclare in
+                JavaScript?
+            </div>
+            <div class="answer" id="answer5">
+                <ol>
+                    <li>Undeclared:</li>
+                    <ul>
+                        <li>An undeclared variable is a variable that has been used in the code without being declared
+                            using var, let, or const.</li>
+                        <li>Accessing an undeclared variable will result in a ReferenceError.</li>
+                        <li>For example:</li>
+                        <code><pre>console.log(foo); // ReferenceError: foo is not defined
+                        </pre></code>
+                    </ul>
+                    <li>Undefined:</li>
+                    <ul>
+                        <li>A variable is said to be "undefined" when it has been declared but not assigned a value.
+                        </li>
+                        <li>Accessing an undefined variable is valid in JavaScript, but it will result in the value
+                            undefined.</li>
+                        <li>For example:</li>
+                        <code><pre>
+                            var bar;
+                            console.log(bar); // Output: undefined
+                            </pre></code>
+                    </ul>
+                </ol>
+            </div>
+        </div>
+
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(6)">Q.6 Using console.log() print out the following statement:
+                The quote 'There is no exercise
+                better for the heart than reaching down and lifting people up.' by John Holmes teaches us to
+                help one another. Using console.log() print out the following quote by Mother Teresa:
+            </div>
+            <div class="answer" id="answer6">
+                <code>
+                    <pre>
+                        console.log("The quote 'There is no exercise better for the heart than reaching down and lifting people up.'
+                         by John Holmes teaches us to help one another.");
+
+                        console.log("The best way to find yourself is to lose yourself in the service of others. - Mother Teresa");
+
+                    </pre>
+                </code>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(7)">Q.7 Check if typeof '10' is exactly equal to 10. If not make
+                it exactly equal?</div>
+            <div class="answer" id="answer7">
+                <code>
+                    <pre>
+                        if (typeof ('10') === typeof (10)) {
+                            documnet.write('The type is already a number.');
+                        } else {
+                            // Convert the string to a number
+                            const numValue = Number('10');
+
+                            // Check if the converted value is exactly equal to 10
+                            if (numValue === 10) {
+                                document.write('The type is now exactly equal to 10.');
+                            } else {
+                                document.write('The type is not exactly equal to 10.');
+                            }
+                        }
+                        
+                    <script>
+                        if (typeof ('10') === typeof (10)) {
+                            documnet.write('The type is already a number.');
+                        } else {
+                            // Convert the string to a number
+                            const numValue = Number('10');
+
+                            // Check if the converted value is exactly equal to 10
+                            if (numValue === 10) {
+                                document.write('The type is now exactly equal to 10.');
+                            } else {
+                                document.write('The type is not exactly equal to 10.');
+                            }
+                        }
+                    </script>
+                    </pre>
+                </code>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(8)">Q.8 Write a JavaScript Program to find the area of a
+                triangle? </div>
+            <div class="answer" id="answer8">
+                <code>
+                    <pre>
+                        // Function to calculate the area of a triangle
+                        function calculateTriangleArea(base, height) {
+                            return 0.5 * base * height;
+                        }
+
+                        // Example usage
+                        const baseLength = 5;
+                        const heightLength = 8;
+
+                        const triangleArea = calculateTriangleArea(baseLength, heightLength);
+
+                        console.log(`The area of the triangle with base ${baseLength} and height ${heightLength} is: ${triangleArea}`);
+
+                        <script>
+                            // Function to calculate the area of a triangle
+                            function calculateTriangleArea(base, height) {
+                                return 0.5 * base * height;
+                            }
+
+                            // Example usage
+                            const baseLength = 5;
+                            const heightLength = 8;
+
+                            const triangleArea = calculateTriangleArea(baseLength, heightLength);
+
+                            document.write(`The area of the triangle with base ${baseLength} and height ${heightLength} is: ${triangleArea}`);
+
+                        </script>
+                    </pre>
+                </code>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(9)">Q.9 Write a JavaScript program to calculate days left until
+                next Christmas?
+            </div>
+            <div class="answer" id="answer9">
+                <code>
+                    <pre>
+                        // Function to calculate days left until next Christmas
+                        function daysUntilChristmas() {
+                            // Get the current date
+                            const currentDate = new Date();
+
+                            // Get the current year
+                            const currentYear = currentDate.getFullYear();
+
+                            // Set the date for Christmas this year
+                            const christmasDate = new Date(currentYear, 11, 25); // Months are 0-based, so 11 represents December
+
+                            // Check if Christmas has already passed this year, if so, set the date for Christmas next year
+                            if (currentDate > christmasDate) {
+                                christmasDate.setFullYear(currentYear + 1);
+                            }
+
+                            // Calculate the difference in days
+                            const daysLeft = Math.ceil((christmasDate - currentDate) / (1000 * 60 * 60 * 24));
+
+                            return daysLeft;
+                        }
+
+                        // Example usage
+                        const daysLeftUntilChristmas = daysUntilChristmas();
+                        document.write(`There are ${daysLeftUntilChristmas} days left until next Christmas.`);
+                        <br>
+                        <script>
+                            // Function to calculate days left until next Christmas
+                            function daysUntilChristmas() {
+                                // Get the current date
+                                const currentDate = new Date();
+
+                                // Get the current year
+                                const currentYear = currentDate.getFullYear();
+
+                                // Set the date for Christmas this year
+                                const christmasDate = new Date(currentYear, 11, 25);
+
+                                // Check if Christmas has already passed this year, if so, set the date for Christmas next year
+                                if (currentDate > christmasDate) {
+                                    christmasDate.setFullYear(currentYear + 1);
+                                }
+
+                                // Calculate the difference in days
+                                const daysLeft = Math.ceil((christmasDate - currentDate) / (1000 * 60 * 60 * 24));
+
+                                return daysLeft;
+                            }
+
+                            // Example usage
+                            const daysLeftUntilChristmas = daysUntilChristmas();
+                            document.write(`There are ${daysLeftUntilChristmas} days left until next Christmas.`);
+
+                        </script>
+                    </pre>
+                </code>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(10)">Q.10 What is Condition Statement?
+            </div>
+            <div class="answer" id="answer10">
+                <p>The if/else statement executes a block of code if a specified condition is true. If the condition is
+                    false, another block of code can be executed.</p>
+                <p>The if/else statement is a part of JavaScript's "Conditional" Statements, which are used to perform
+                    different actions based on different conditions.</p>
+                <p>In JavaScript we have the following conditional statements:</p>
+                <ul>
+                    <li>
+                        <p>Use if to specify a block of code to be executed, if a specified condition is true</p>
+                    </li>
+                    <li>
+                        <p>Use else to specify a block of code to be executed, if the same condition is false </p>
+                    </li>
+                    <li>
+                        <p>Use else if to specify a new condition to test, if the first condition is false</p>
+                    </li>
+                    <li>
+                        <p>Use switch to select one of many blocks of code to be executed</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(11)">Q.11 Find circumference of Rectangle ?</div>
+            <div class="answer" id="answer11">
+                <code>
+                    <pre>
+                        // Function to calculate the circumference (perimeter) of a rectangle
+                        function calculateRectangleCircumference(length, width) {
+                            return 2 * (length + width);
+                        }
+
+                        // Example usage
+                        const rectangleLength = 5;
+                        const rectangleWidth = 8;
+
+                        const rectangleCircumference = calculateRectangleCircumference(rectangleLength, rectangleWidth);
+
+                        document.write(`The circumference of the rectangle is: ${rectangleCircumference}`);
+
+                        <script>
+                            // Function to calculate the circumference (perimeter) of a rectangle
+                            function calculateRectangleCircumference(length, width) {
+                                return 2 * (length + width);
+                            }
+
+                            // Example usage
+                            const rectangleLength = 5;
+                            const rectangleWidth = 8;
+
+                            const rectangleCircumference = calculateRectangleCircumference(rectangleLength, rectangleWidth);
+
+                            document.write(`The circumference of the rectangle is: ${rectangleCircumference}`);
+
+                        </script>
+                    </pre>
+                </code>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(12)">Q.12 WAP to convert years into days and days into years?
+            </div>
+            <div class="answer" id="answer12">
+                <code>
+                    <pre>
+                        // Function to convert years to days
+                        function yearsToDays(years) {
+                            const daysInYear = 365;
+                            return years * daysInYear;
+                        }
+
+                        // Function to convert days to years
+                        function daysToYears(days) {
+                            const daysInYear = 365;
+                            return days / daysInYear;
+                        }
+
+                       
+                        const yearsInput = 2;
+                        const daysInput = 730; 
+
+                        const convertedDays = yearsToDays(yearsInput);
+                        const convertedYears = daysToYears(daysInput);
+
+                        document.write(`${yearsInput} years is equal to ${convertedDays} days.`);
+                        document.write(`${daysInput} days is equal to ${convertedYears.toFixed(2)} years.`);
+
+                        <script>
+                            // Function to convert years to days
+                            function yearsToDays(years) {
+                                const daysInYear = 365;
+                                return years * daysInYear;
+                            }
+
+                            // Function to convert days to years
+                            function daysToYears(days) {
+                                const daysInYear = 365;
+                                return days / daysInYear;
+                            }
+
+
+                            const yearsInput = 2;
+                            const daysInput = 730;
+
+                            const convertedDays = yearsToDays(yearsInput);
+                            const convertedYears = daysToYears(daysInput);
+
+                            document.write(`${yearsInput} years is equal to ${convertedDays} days.`);
+                            document.write(`${daysInput} days is equal to ${convertedYears.toFixed(2)} years.`);
+
+                        </script>
+                    </pre>
+                </code>
+            </div>
+        </div>
+
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(13)">Q.13 Convert temperature Fahrenheit to Celsius?
+                (Conditional logic Question)
+            </div>
+            <div class="answer" id="answer13">
+                <code>
+                    <pre>
+                        // Function to convert Fahrenheit to Celsius
+                        function fahrenheitToCelsius(fahrenheit) {
+                            const celsius = (fahrenheit - 32) / 1.8;
+                            return celsius;
+                        }
+
+                        // Example usage
+                        const fahrenheitTemperature = 98.6; // Replace this with the Fahrenheit temperature you want to convert
+
+                        const celsiusTemperature = fahrenheitToCelsius(fahrenheitTemperature);
+
+                        document.write(`${fahrenheitTemperature} degrees Fahrenheit is equal to ${celsiusTemperature.toFixed(2)} degrees Celsius.`);
+
+                        <script>
+                            function fahrenheitToCelsius(fahrenheit) {
+                                const celsius = (fahrenheit - 32) / 1.8;
+                                return celsius;
+                            }
+
+                            // Example usage
+                            const fahrenheitTemperature = 98.6; // Replace this with the Fahrenheit temperature you want to convert
+
+                            const celsiusTemperature = fahrenheitToCelsius(fahrenheitTemperature);
+
+                            document.write(`${fahrenheitTemperature} degrees Fahrenheit is equal to ${celsiusTemperature.toFixed(2)} degrees Celsius.`);
+
+                        </script>
+                    </pre>
+                </code>
+            </div>
+        </div>
+
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(14)">Q.14 Write a JavaScript exercise to get the extension of a
+                filename.?
+            </div>
+            <div class="answer" id="answer14">
+                <code>
+                    <pre>
+                        // Function to get the file extension from a filename
+                        function getFileExtension(filename) {
+                            // Split the filename into an array using the dot as a delimiter
+                            const parts = filename.split('.');
+
+                            // Check if there's more than one part (i.e., if there's a file extension)
+                            if (parts.length > 1) {
+                                // Get the last part, which should be the file extension
+                                const extension = parts[parts.length - 1];
+
+                                // Return the file extension in lowercase
+                                return extension.toLowerCase();
+                            } else {
+                                // If there's no file extension, return an appropriate message or handle as needed
+                                return "No file extension found";
+                            }
+                        }
+
+                        // Example usage
+                        const filename1 = "example.txt";
+                        const filename2 = "document.docx";
+                        const filename3 = "image.jpg";
+
+                        console.log(`File extension for ${filename1}: ${getFileExtension(filename1)}`);
+                        console.log(`File extension for ${filename2}: ${getFileExtension(filename2)}`);
+                        console.log(`File extension for ${filename3}: ${getFileExtension(filename3)}`);
+                        <br>    
+                        <script>
+                            // Function to get the file extension from a filename
+                            function getFileExtension(filename) {
+                                // Split the filename into an array using the dot as a delimiter
+                                const parts = filename.split('.');
+
+                                // Check if there's more than one part (i.e., if there's a file extension)
+                                if (parts.length > 1) {
+                                    // Get the last part, which should be the file extension
+                                    const extension = parts[parts.length - 1];
+
+                                    // Return the file extension in lowercase
+                                    return extension.toLowerCase();
+                                } else {
+                                    // If there's no file extension, return an appropriate message or handle as needed
+                                    return "No file extension found";
+                                }
+                            }
+
+                            // Example usage
+                            const filename1 = "example.txt";
+                            const filename2 = "document.docx";
+                            const filename3 = "image.jpg";
+
+                            document.write(`File extension for ${filename1}: ${getFileExtension(filename1)} `);
+
+                            document.write(` File extension for ${filename2}: ${getFileExtension(filename2)} `);
+
+                            document.write(` File extension for ${filename3}: ${getFileExtension(filename3)} `);
+                        </script>
+                     
+                    </pre>
+                </code>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(15)">Q.15 What is the result of the expression (5 > 3 && 2 < 4)?
+                    </div>
+                    <div class="answer" id="answer15">
+                        <p>The expression (5 > 3 && 2 < 4) involves the logical AND operator (&&). The logical AND
+                                operator returns true if both of its operands are true; otherwise, it returns false.</p>
+                                <p>Let's evaluate the expression step by step:</p>
+                                <ul>
+                                    <li>5 > 3 evaluates to true.</li>
+                                    <li>2 < 4 evaluates to true.</li>
+                                </ul>
+                                <p>Now, combine these using the logical AND operator:</p>
+                                <p>true && true evaluates to true.</p>
+                                <p>Therefore, the result of the expression (5 > 3 && 2 < 4) is true.</p>
+                    </div>
+            </div>
+
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(16)">Q.16 What is the result of the expression (true && 1 &&
+                    "hello")?</div>
+                <div class="answer" id="answer16">
+                    <p>The expression (true && 1 && "hello") involves the logical AND operator (&&). The logical AND
+                        operator returns the last truthy value if all operands are truthy; otherwise, it returns the
+                        first falsy value.</p>
+                    <p>true && 1 && "hello" evaluates to "hello".</p>
+                    <p>Therefore, the result of the expression (true && 1 && "hello") is the last truthy value, which is
+                        "hello".</p>
+                </div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(17)">Q.17 What is the result of the expression true && false
+                    || false && true?
+                </div>
+                <div class="answer" id="answer17">
+                    <p>The expression true && false || false && true involves the logical AND (&&) and logical OR (||)
+                        operators.</p>
+                    <p>In JavaScript, the logical AND operator (&&) has higher precedence than the logical OR operator
+                        (||). Therefore, the expression is evaluated from left to right, and the result is determined
+                        accordingly.</p>
+                    <p>Let's break down the expression:</p>
+                    <ol>
+                        <li>true && false evaluates to false (because both conditions must be true for the AND operator
+                            to result in true).</li>
+                        <li>false || false evaluates to false (because at least one condition must be true for the OR
+                            operator to result in true).</li>
+                        <li>Finally, false && true also evaluates to false.</li>
+                        <li>So, the result of the entire expression is false.</li>
+                    </ol>
+                </div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(18)">Q.18 What is a Loop and Switch Case in JavaScript
+                    define that ?
+                </div>
+                <div class="answer" id="answer18">
+                    <p>Loop in JavaScript:</p>
+                    <p>A loop in JavaScript is a programming construct that allows you to repeatedly execute a block of
+                        code as long as a specified condition is true. Loops provide a way to automate repetitive tasks
+                        and iterate over a set of values, such as the elements of an array or the characters in a
+                        string. There are several types of loops in JavaScript:</p>
+                    <ol>
+                        <li>for loop:</li>
+                        <code>
+                            for (initialization; condition; update) {
+                                // Code to be executed in each iteration
+                            }
+                        </code>
+                        <li>while loop:</li>
+                        <code>
+                            while (condition) {
+                                // Code to be executed as long as the condition is true
+                            }
+                        </code>
+                        <li>do-while loop:</li>
+                        <code>
+                            do {
+                                // Code to be executed at least once, then repeatedly as long as the condition is true
+                            } while (condition);                            
+                        </code>
+                    </ol>
+                    <p>Switch Case in JavaScript:</p>
+                    <p>The switch statement is used to perform different actions based on different conditions. It's
+                        often used as an alternative to a series of if-else statements when there are multiple possible
+                        conditions to check.</p>
+                    <code>
+                        switch (expression) {
+                            <br>
+                            case value1:
+                                // Code to be executed if expression equals value1
+                                break;
+                            <br>
+                            case value2:
+                                // Code to be executed if expression equals value2
+                                break;
+                            <br>
+                            // Additional cases as needed
+                            default:
+                                // Code to be executed if none of the cases match
+                        }
+                        
+                    </code>
+                </div>
+            </div>
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(19)">Q.19 What is the use of is Nan function?
+                </div>
+                <div class="answer" id="answer19">
+                    <p>In JavaScript, the isNaN() function is used to check whether a value is NaN (Not-a-Number). The
+                        purpose of this function is to determine if a given value is not a valid number.</p>
+                    <p>The syntax for the isNaN() function is as follows:</p>
+                    <code><p>isNaN(value)
+                    </p></code>
+                    <p>-value: The value to be tested.</p>
+                    <p>The isNaN() function returns true if the provided value is NaN or if it cannot be converted into
+                        a valid number. It returns false if the value is a valid number or can be converted into one.
+                    </p>
+                    <p><code>
+                        <pre>
+                        console.log(isNaN(123));        // Output: false (123 is a valid number)
+                        console.log(isNaN("abc"));      // Output: true ("abc" cannot be converted to a number)
+                        console.log(isNaN(NaN));        // Output: true (NaN is not a valid number)
+                        console.log(isNaN("123"));      // Output: false ("123" can be converted to the number 123)
+                        console.log(isNaN(true));       // Output: false (true can be converted to the number 1)
+                        console.log(isNaN(null));       // Output: false (null can be converted to the number 0)
+                        
+                        </pre>
+                    </code></p>
+                </div>
+            </div>
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(20)">Q.20 What is the difference between && and || in
+                    JavaScript?
+                </div>
+                <div class="answer" id="answer20">
+                    <p>In JavaScript, && and || are logical operators used for combining or evaluating expressions. Here
+                        are the key differences between them:</p>
+                    <p>Logical AND (&&):</p>
+                    <p>-The && operator returns true if both operands are true.</p>
+                    <p>-It returns false if at least one of the operands is false.</p>
+                    <code>
+                        <pre>
+                            let result = (5 > 3) && (2 < 4);
+                            console.log(result);  // Output: true
+                        </pre>
+                    </code>
+                    <p>Logical OR (||):</p>
+                    <p>-The || operator returns true if at least one of the operands is true.</p>
+                    <p>-It returns false only if both operands are false.</p>
+                    <code>
+                        <pre>
+                            let result = (5 > 3) || (2 > 4);
+                            console.log(result);  // Output: true
+
+                        </pre>
+                    </code>
+                </div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(21)">Q.21 What is the use of Void (0)?
+                </div>
+                <div class="answer" id="answer21">
+                    <p>The void operator is often used merely to obtain the undefined primitive value, usually using
+                        void(0) (which is equivalent to void 0). In these cases, the global variable undefined can be
+                        used.</p>
+                </div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(22)">Q.22 Check Number Is Positive or Negative in JavaScript? 
+                </div>
+                <div class="answer" id="answer22">
+                    <code>
+                        <pre>
+                            // Function to check if a number is positive, negative, or zero
+                            function checkNumber(number) {
+                                if (number > 0) {
+                                    return "Positive";
+                                } else if (number < 0) {
+                                    return "Negative";
+                                } else {
+                                    return "Zero";
+                                }
+                            }
+
+                            // Example usage
+                            const result1 = checkNumber(5);
+                            console.log(`Result for 5: ${result1}`); // Output: Positive
+
+                            const result2 = checkNumber(-3);
+                            console.log(`Result for -3: ${result2}`); // Output: Negative
+
+                            const result3 = checkNumber(0);
+                            console.log(`Result for 0: ${result3}`); // Output: Zero
+                            <script>
+                                // Function to check if a number is positive, negative, or zero
+                            function checkNumber(number) {
+                                if (number > 0) {
+                                    return "Positive";
+                                } else if (number < 0) {
+                                    return "Negative";
+                                } else {
+                                    return "Zero";
+                                }
+                            }
+
+                            // Example usage
+                            const result1 = checkNumber(5);
+                            document.write(`\nResult for 5: ${result1}\n`); // Output: Positive
+                            
+                            const result2 = checkNumber(-3);
+                            document.write(`Result for -3: ${result2}\n`); // Output: Negative
+                            
+                            const result3 = checkNumber(0);
+                            document.write(`Result for 0: ${result3}\n`); // Output: Zero
+                            
+                            </script>
+                        </pre>
+                    </code>
+                </div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(23)">Q.23 Find the Character Is Vowel or Not ? 
+                </div>
+                <div class="answer" id="answer23">
+                    <code>
+                        <pre>
+                            function checkChar(char){ 
+                                ch = char.toLowerCase(); 
+                                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') 
+                                return console.log("Given character is a Vowel"); 
+                                return console.log("Given character is a Consonent"); 
+                            } 
+                            
+                            
+                            checkChar('G'); 
+                            checkChar('A')
+                        <script>
+                            function checkChar(char){ 
+                            ch = char.toLowerCase(); 
+                            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') 
+                            return document.write("\n Given character is a Vowel"); 
+            
+                            return document.write("\n Given character is a Consonent"); 
+                        } 
+
+
+                        checkChar('G'); 
+                        checkChar('A')
+
+                        </script>                            
+                        </pre>
+                    </code>
+                </div>
+            </div>
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(24)">Q.24 Check Number Is Positive or Negative in JavaScript? 
+                </div>
+                <div class="answer" id="answer24">
+                    <code>
+                        <pre>
+                            // Function to check if a number is positive, negative, or zero
+                            function checkNumber(number) {
+                                if (number > 0) {
+                                    return "Positive";
+                                } else if (number < 0) {
+                                    return "Negative";
+                                } else {
+                                    return "Zero";
+                                }
+                            }
+
+                            // Example usage
+                            const result1 = checkNumber(5);
+                            console.log(`Result for 5: ${result1}`); // Output: Positive
+
+                            const result2 = checkNumber(-3);
+                            console.log(`Result for -3: ${result2}`); // Output: Negative
+
+                            const result3 = checkNumber(0);
+                            console.log(`Result for 0: ${result3}`); // Output: Zero
+                            <script>
+                                // Function to check if a number is positive, negative, or zero
+                            function checkNumber(number) {
+                                if (number > 0) {
+                                    return "Positive";
+                                } else if (number < 0) {
+                                    return "Negative";
+                                } else {
+                                    return "Zero";
+                                }
+                            }
+
+                            // Example usage
+                            const result1 = checkNumber(5);
+                            document.write(`\nResult for 5: ${result1}\n`); // Output: Positive
+                            
+                            const result2 = checkNumber(-3);
+                            document.write(`Result for -3: ${result2}\n`); // Output: Negative
+                            
+                            const result3 = checkNumber(0);
+                            document.write(`Result for 0: ${result3}\n`); // Output: Zero
+                            
+                            </script>
+                        </pre>
+                    </code>
+                </div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(25)">Q.25 Write to find number is even or odd using ternary operator in JS? 
+                </div>
+                <div class="answer" id="answer25">
+                    <code>
+                        <pre>
+                            // Function to check if a number is even or odd using a ternary operator
+                            function checkEvenOdd(number) {
+                                const result = number % 2 === 0 ? "Even" : "Odd";
+                                return result;
+                            }
+
+                            // Example usage
+                            const num1 = 4;
+                            console.log(`${num1} is ${checkEvenOdd(num1)}.`);  // Output: 4 is Even
+
+                            const num2 = 7;
+                            console.log(`${num2} is ${checkEvenOdd(num2)}.`);  // Output: 7 is Odd
+                            <script>
+                                // Function to check if a number is even or odd using a ternary operator
+                            function checkEvenOdd(number) {
+                                const result = number % 2 === 0 ? "Even" : "Odd";
+                                return result;
+                            }
+
+                            // Example usage
+                            const num1 = 4;
+                            document.write(`\n${num1} is ${checkEvenOdd(num1)}.\n`);  // Output: 4 is Even
+
+                            const num2 = 7;
+                            document.write(`\n${num2} is ${checkEvenOdd(num2)}.\n`);  // Output: 7 is Odd
+
+                            </script>
+                        </pre>
+                    </code>
+                </div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(26)">Q.26 Write find maximum number among 3 numbers using ternary operator in JS?
+                </div>
+                <div class="answer" id="answer26">
+                    <code>
+                        <pre>
+                            // Function to find the maximum among three numbers using a ternary operator
+                            function findMax(num1, num2, num3) {
+                                const max = num1 > num2 ? (num1 > num3 ? num1 : num3) : (num2 > num3 ? num2 : num3);
+                                return max;
+                            }
+
+                            // Example usage
+                            const result1 = findMax(5, 10, 8);
+                            console.log(`The maximum number is: ${result1}`);  // Output: The maximum number is: 10
+                            <script>
+                            // Function to find the maximum among three numbers using a ternary operator
+                            function findMax(num1, num2, num3) {
+                                const max = num1 > num2 ? (num1 > num3 ? num1 : num3) : (num2 > num3 ? num2 : num3);
+                                return max;
+                            }
+
+                            // Example usage
+                            const result = findMax(5, 10, 8);
+                            document.write(`The maximum number is: ${result}`);  // Output: The maximum number is: 10
+
+                            </script>
+                        </pre>
+                    </code>
+                </div>
+            </div>
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
+                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
+                    used
+                    for describing the look and formatting of a document written in HTML.</div>
+            </div>
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
+                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
+                    used
+                    for describing the look and formatting of a document written in HTML.</div>
+            </div>
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
+                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
+                    used
+                    for describing the look and formatting of a document written in HTML.</div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
+                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
+                    used
+                    for describing the look and formatting of a document written in HTML.</div>
+            </div>
+
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
+                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
+                    used
+                    for describing the look and formatting of a document written in HTML.</div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
+                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
+                    used
+                    for describing the look and formatting of a document written in HTML.</div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
+                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
+                    used
+                    for describing the look and formatting of a document written in HTML.</div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
+                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
+                    used
+                    for describing the look and formatting of a document written in HTML.</div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
+                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
+                    used
+                    for describing the look and formatting of a document written in HTML.</div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
+                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
+                    used
+                    for describing the look and formatting of a document written in HTML.</div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
+                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
+                    used
+                    for describing the look and formatting of a document written in HTML.</div>
+            </div>
+
+
+            <div class="qa-item">
+                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
+                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
+                    used
+                    for describing the look and formatting of a document written in HTML.</div>
+            </div>
+
+        </div>
+
+        <script>
+            function toggleAnswer(id) {
+                var answer = document.getElementById("answer" + id);
+                answer.style.display = (answer.style.display === "none") ? "block" : "none";
+            }
+        </script>
+</body>
+
+</html>
