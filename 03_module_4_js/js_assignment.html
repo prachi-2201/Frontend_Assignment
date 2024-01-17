@@ -811,7 +811,8 @@
 
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(22)">Q.22 Check Number Is Positive or Negative in JavaScript? 
+                <div class="question" onclick="toggleAnswer(22)">Q.22 Check Number Is Positive or Negative in
+                    JavaScript?
                 </div>
                 <div class="answer" id="answer22">
                     <code>
@@ -866,7 +867,7 @@
 
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(23)">Q.23 Find the Character Is Vowel or Not ? 
+                <div class="question" onclick="toggleAnswer(23)">Q.23 Find the Character Is Vowel or Not ?
                 </div>
                 <div class="answer" id="answer23">
                     <code>
@@ -882,17 +883,17 @@
                             checkChar('G'); 
                             checkChar('A')
                         <script>
-                            function checkChar(char){ 
-                            ch = char.toLowerCase(); 
-                            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') 
-                            return document.write("\n Given character is a Vowel"); 
-            
-                            return document.write("\n Given character is a Consonent"); 
-                        } 
+                            function checkChar(char) {
+                                ch = char.toLowerCase();
+                                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+                                    return document.write("\n Given character is a Vowel");
+
+                                return document.write("\n Given character is a Consonent");
+                            }
 
 
-                        checkChar('G'); 
-                        checkChar('A')
+                            checkChar('G');
+                            checkChar('A')
 
                         </script>                            
                         </pre>
@@ -901,7 +902,8 @@
             </div>
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(24)">Q.24 Check Number Is Positive or Negative in JavaScript? 
+                <div class="question" onclick="toggleAnswer(24)">Q.24 Check Number Is Positive or Negative in
+                    JavaScript?
                 </div>
                 <div class="answer" id="answer24">
                     <code>
@@ -956,7 +958,8 @@
 
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(25)">Q.25 Write to find number is even or odd using ternary operator in JS? 
+                <div class="question" onclick="toggleAnswer(25)">Q.25 Write to find number is even or odd using ternary
+                    operator in JS?
                 </div>
                 <div class="answer" id="answer25">
                     <code>
@@ -975,17 +978,17 @@
                             console.log(`${num2} is ${checkEvenOdd(num2)}.`);  // Output: 7 is Odd
                             <script>
                                 // Function to check if a number is even or odd using a ternary operator
-                            function checkEvenOdd(number) {
-                                const result = number % 2 === 0 ? "Even" : "Odd";
-                                return result;
-                            }
+                                function checkEvenOdd(number) {
+                                    const result = number % 2 === 0 ? "Even" : "Odd";
+                                    return result;
+                                }
 
-                            // Example usage
-                            const num1 = 4;
-                            document.write(`\n${num1} is ${checkEvenOdd(num1)}.\n`);  // Output: 4 is Even
+                                // Example usage
+                                const num1 = 4;
+                                document.write(`\n${num1} is ${checkEvenOdd(num1)}.\n`);  // Output: 4 is Even
 
-                            const num2 = 7;
-                            document.write(`\n${num2} is ${checkEvenOdd(num2)}.\n`);  // Output: 7 is Odd
+                                const num2 = 7;
+                                document.write(`\n${num2} is ${checkEvenOdd(num2)}.\n`);  // Output: 7 is Odd
 
                             </script>
                         </pre>
@@ -995,7 +998,8 @@
 
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(26)">Q.26 Write find maximum number among 3 numbers using ternary operator in JS?
+                <div class="question" onclick="toggleAnswer(26)">Q.26 Write find maximum number among 3 numbers using
+                    ternary operator in JS?
                 </div>
                 <div class="answer" id="answer26">
                     <code>
@@ -1010,15 +1014,15 @@
                             const result1 = findMax(5, 10, 8);
                             console.log(`The maximum number is: ${result1}`);  // Output: The maximum number is: 10
                             <script>
-                            // Function to find the maximum among three numbers using a ternary operator
-                            function findMax(num1, num2, num3) {
-                                const max = num1 > num2 ? (num1 > num3 ? num1 : num3) : (num2 > num3 ? num2 : num3);
-                                return max;
-                            }
+                                // Function to find the maximum among three numbers using a ternary operator
+                                function findMax(num1, num2, num3) {
+                                    const max = num1 > num2 ? (num1 > num3 ? num1 : num3) : (num2 > num3 ? num2 : num3);
+                                    return max;
+                                }
 
-                            // Example usage
-                            const result = findMax(5, 10, 8);
-                            document.write(`The maximum number is: ${result}`);  // Output: The maximum number is: 10
+                                // Example usage
+                                const result = findMax(5, 10, 8);
+                                document.write(`The maximum number is: ${result}`);  // Output: The maximum number is: 10
 
                             </script>
                         </pre>
@@ -1027,97 +1031,986 @@
             </div>
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
-                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
-                    used
-                    for describing the look and formatting of a document written in HTML.</div>
+                <div class="question" onclick="toggleAnswer(27)">Q.27 Write to find minimum number among 3 numbers using
+                    ternary operator in JS?
+                </div>
+                <div class="answer" id="answer27">
+                    <code>
+                        <pre>
+                        // Function to find the minimum among three numbers using a ternary operator
+                        function findMin(num1, num2, num3) {
+                            const min = num1 < num2 ? (num1 < num3 ? num1 : num3) : (num2 < num3 ? num2 : num3);
+                            return min;
+                        }
+
+                        // Example usage
+                        const result1 = findMin(5, 10, 8);
+                        console.log(`The minimum number is: ${result1}`);  // Output: The minimum number is: 5
+                        <script>
+                            function findMin(num1, num2, num3) {
+                            const min = num1 < num2 ? (num1 < num3 ? num1 : num3) : (num2 < num3 ? num2 : num3);
+                            return min;
+                        }
+
+                        // Example usage
+                        const resul = findMin(5, 10, 8);
+                        document.write(`The minimum number is: ${resul}`);  // Output: The minimum number is: 5
+
+                        </script>
+                        </pre>
+                    </code>
+                </div>
             </div>
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
-                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
-                    used
-                    for describing the look and formatting of a document written in HTML.</div>
+                <div class="question" onclick="toggleAnswer(28)">Q.28 Write to find the largest of three numbers in JS?
+                </div>
+                <div class="answer" id="answer28">
+                    <code>
+                        <pre>
+                            // Function to find the largest among three numbers
+                            function findLargest(num1, num2, num3) {
+                                return Math.max(num1, num2, num3);
+                            }
+
+                            // Example usage
+                            const result1 = findLargest(5, 10, 8);
+                            console.log(`The largest number is: ${result1}`);  // Output: The largest number is: 10
+
+                            <script>
+                                // Function to find the largest among three numbers
+                                function findLargest(num1, num2, num3) {
+                                    return Math.max(num1, num2, num3);
+                                }
+
+                                // Example usage
+                                var res = findLargest(5, 10, 8);
+                                document.write(`The largest number is: ${res}`);  // Output: The largest number is: 10
+
+                            </script>
+                        </pre>
+                    </code>
+                </div>
             </div>
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
-                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
-                    used
-                    for describing the look and formatting of a document written in HTML.</div>
+                <div class="question" onclick="toggleAnswer(29)">Q.29 Write to show
+                    <br>
+                    i. Monday to Sunday using switch case in JS?
+                    <br>
+                    ii. Vowel or Consonant using switch case in JS?
+                </div>
+                <div class="answer" id="answer29">
+                    <code>
+                        <pre>
+                            <h3>Example 1</h3>
+                            // Function to display the day of the week using switch case
+                            function displayDay(dayNumber) {
+                                switch (dayNumber) {
+                                    case 1:
+                                        console.log("Monday");
+                                        break;
+                                    case 2:
+                                        console.log("Tuesday");
+                                        break;
+                                    case 3:
+                                        console.log("Wednesday");
+                                        break;
+                                    case 4:
+                                        console.log("Thursday");
+                                        break;
+                                    case 5:
+                                        console.log("Friday");
+                                        break;
+                                    case 6:
+                                        console.log("Saturday");
+                                        break;
+                                    case 7:
+                                        console.log("Sunday");
+                                        break;
+                                    default:
+                                        console.log("Invalid day number");
+                                }
+                            }   
+                            // Example usage
+                            displayDay(3);  // Output: Wednesday
+                            <script>
+                                // Function to display the day of the week using switch case
+                                function displayDay(dayNumber) {
+                                    switch (dayNumber) {
+                                        case 1:
+                                            document.write("Monday");
+                                            break;
+                                        case 2:
+                                            document.write("Tuesday");
+                                            break;
+                                        case 3:
+                                            document.write("Wednesday");
+                                            break;
+                                        case 4:
+                                            document.write("Thursday");
+                                            break;
+                                        case 5:
+                                            document.write("Friday");
+                                            break;
+                                        case 6:
+                                            document.write("Saturday");
+                                            break;
+                                        case 7:
+                                            document.write("Sunday");
+                                            break;
+                                        default:
+                                            document.write("Invalid day number");
+                                    }
+                                }
+                                // Example usage
+                                displayDay(3);  // Output: Wednesday
+                            </script>
+                            <h3>Example 2</h3>
+                            // Function to check if a character is a vowel or consonant using switch case
+                            function checkVowelConsonant(char) {
+                                switch (char.toLowerCase()) {
+                                    case 'a':
+                                    case 'e':
+                                    case 'i':
+                                    case 'o':
+                                    case 'u':
+                                        console.log(`${char} is a Vowel`);
+                                        break;
+                                    default:
+                                        console.log(`${char} is a Consonant`);
+                                }
+                            }
+                            
+                            // Example usage
+                            checkVowelConsonant('a');  // Output: a is a Vowel
+                            <script>
+                                // Function to check if a character is a vowel or consonant using switch case
+                                function checkVowelConsonant(char) {
+                                    switch (char.toLowerCase()) {
+                                        case 'a':
+                                        case 'e':
+                                        case 'i':
+                                        case 'o':
+                                        case 'u':
+                                            document.writeln(`${char} is a Vowel`);
+                                            break;
+                                        default:
+                                            document.write(`${char} is a Consonant`);
+                                    }
+                                }
+
+                                // Example usage
+                                checkVowelConsonant('a');  // Output: a is a Vowel
+                            </script>
+                        </pre>
+                    </code>
+                </div>
             </div>
 
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
-                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
-                    used
-                    for describing the look and formatting of a document written in HTML.</div>
+                <div class="question" onclick="toggleAnswer(30)">Q.30 What are the looping structures in JavaScript? Any
+                    one Example?
+                </div>
+                <div class="answer" id="answer30">
+                    <p>Loop in JavaScript:</p>
+                    <p>A loop in JavaScript is a programming construct that allows you to repeatedly execute a block of
+                        code as long as a specified condition is true. Loops provide a way to automate repetitive tasks
+                        and iterate over a set of values, such as the elements of an array or the characters in a
+                        string. There are several types of loops in JavaScript:</p>
+                    <ol>
+                        <li>for loop:</li>
+                        <code>
+                            for (initialization; condition; update) {
+                                // Code to be executed in each iteration
+                            }
+                        </code>
+                        <li>while loop:</li>
+                        <code>
+                            while (condition) {
+                                // Code to be executed as long as the condition is true
+                            }
+                        </code>
+                        <li>do-while loop:</li>
+                        <code>
+                            do {
+                                // Code to be executed at least once, then repeatedly as long as the condition is true
+                            } while (condition);                            
+                        </code>
+                    </ol>
+                    <h3>FOR LOOP</h3>
+                    <p>
+                        The for loop consists of three optional expressions, followed by a code block:
+                    </p>
+                    <ul>
+                        <li>initialization - This expression runs before the execution of the first loop, and is usually
+                            used to create a counter.</li>
+                        <li>condition - This expression is checked each time before the loop runs. If it evaluates to
+                            true, the statement or code in the loop is executed. If it evaluates to false, the loop
+                            stops. And if this expression is omitted, it automatically evaluates to true.</li>
+                        <li>finalExpression - This expression is executed after each iteration of the loop. This is
+                            usually used to increment a counter, but can be used to decrement a counter instead.</li>
+                    </ul>
+                    <code>
+                        <pre>
+                            for (let i = 0; i < 9; i++) {
+                                console.log(i);
+                              }
+                            <script>
+                            for (let i = 0; i < 9; i++) {
+                                document.write(i);
+                            }
+                            </script>
+                        </pre>
+                    </code>
+                </div>
             </div>
 
 
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
-                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
-                    used
-                    for describing the look and formatting of a document written in HTML.</div>
+                <div class="question" onclick="toggleAnswer(31)">Q.31 Write a print 972 to 897 using for loop in JS?
+                </div>
+                <div class="answer" id="answer31">
+                    <code>
+                            <pre>
+                                // Print numbers from 972 to 897 using a for loop
+                                for (let i = 972; i >= 897; i--) {
+                                    console.log(i);
+                                }
+                                <script>
+                                    // Print numbers from 972 to 897 using a for loop
+                                    for (let i = 972; i >= 897; i--) {
+                                        document.writeln(i);
+                                    }
+
+                                </script>
+                            </pre>
+                        </code>
+                </div>
             </div>
 
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
-                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
-                    used
-                    for describing the look and formatting of a document written in HTML.</div>
+                <div class="question" onclick="toggleAnswer(32)">Q.32 Write to print factorial of given number?
+                </div>
+                <div class="answer" id="answer32">
+                    <code>
+                        <pre>
+                            // Function to calculate the factorial of a given number
+                            function calculateFactorial(number) {
+                                if (number < 0) {
+                                    return "Invalid input. Factorial is undefined for negative numbers.";
+                                } else if (number === 0 || number === 1) {
+                                    return 1;
+                                } else {
+                                    let factorial = 1;
+                                    for (let i = 2; i <= number; i++) {
+                                        factorial *= i;
+                                    }
+                                    return factorial;
+                                }
+                            }
+
+                            // Example usage
+                            const num = 5;
+                            const result = calculateFactorial(num);
+                            console.log(`The factorial of ${num} is: ${result}`);
+                            <script>
+                                // Function to calculate the factorial of a given number
+                            function calculateFactorial(number) {
+                                if (number < 0) {
+                                    return "Invalid input. Factorial is undefined for negative numbers.";
+                                } else if (number === 0 || number === 1) {
+                                    return 1;
+                                } else {
+                                    let factorial = 1;
+                                    for (let i = 2; i <= number; i++) {
+                                        factorial *= i;
+                                    }
+                                    return factorial;
+                                }
+                            }
+
+                            // Example usage
+                            var num = 5;
+                            var r = calculateFactorial(num);
+                            document.write(`The factorial of ${num} is: ${r}`);
+
+                            </script>
+                        </pre>
+                    </code>
+                </div>
             </div>
 
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
-                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
-                    used
-                    for describing the look and formatting of a document written in HTML.</div>
+                <div class="question" onclick="toggleAnswer(33)">Q.33 Write to print Fibonacci series up to given
+                    numbers?
+                </div>
+                <div class="answer" id="answer33">
+                    <code>
+                        <pre>
+                            // Function to calculate the factorial of a given number
+                            function calculateFactorial(number) {
+                                if (number < 0) {
+                                    return "Invalid input. Factorial is undefined for negative numbers.";
+                                } else if (number === 0 || number === 1) {
+                                    return 1;
+                                } else {
+                                    let factorial = 1;
+                                    for (let i = 2; i <= number; i++) {
+                                        factorial *= i;
+                                    }
+                                    return factorial;
+                                }
+                            }
+
+                            // Example usage
+                            const num = 5;
+                            const result = calculateFactorial(num);
+                            console.log(`The factorial of ${num} is: ${result}`);
+                            <script>
+                                // Function to calculate the factorial of a given number
+                            function calculateFactorial(number) {
+                                if (number < 0) {
+                                    return "Invalid input. Factorial is undefined for negative numbers.";
+                                } else if (number === 0 || number === 1) {
+                                    return 1;
+                                } else {
+                                    let factorial = 1;
+                                    for (let i = 2; i <= number; i++) {
+                                        factorial *= i;
+                                    }
+                                    return factorial;
+                                }
+                            }
+
+                            // Example usage
+                            var num = 5;
+                            var r = calculateFactorial(num);
+                            document.write(`The factorial of ${num} is: ${r}`);
+
+                            </script>
+                        </pre>
+                    </code>
+                </div>
             </div>
 
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
-                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
-                    used
-                    for describing the look and formatting of a document written in HTML.</div>
+                <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
+                    number = 64728 ---> reverse =82746 in JS? </div>
+                <div class="answer" id="answer34">
+                    <code>
+                        <pre>
+                            let n = 123456789;
+                            let a = n.toString().split('').reverse().join('');
+                            document.write(a);
+                            <script>
+                                let n = 123456789;
+                                let ans = n.toString().split('').reverse().join('');
+                                document.write(ans);
+                            </script>
+                        </pre>
+                    </code>
+                </div>
             </div>
 
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
-                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
-                    used
-                    for describing the look and formatting of a document written in HTML.</div>
+                <div class="question" onclick="toggleAnswer(35)">Q.35 Write a program make a summation of given number
+                    (E.g., 1523 Ans: - 11) in JS?
+                </div>
+                <div class="answer" id="answer35">
+                    <code>
+                        <pre>
+                            function getSum(n)
+                            {
+                                var sum = 0;
+                                while (n != 0) {
+                                    sum = sum + n % 10;
+                                    n = parseInt(n / 10);
+                                }
+                                return sum;
+                            }
+                            
+                            // Driver code
+                            var n = 687;
+                            document.write(getSum(n));
+                                
+                            <script>
+
+                                // Javascript program to compute sum of digits in
+                                // number.
+
+                                /* Function to get sum of digits */
+                                function getSum(n1) {
+                                    var sum = 0;
+                                    while (n1 != 0) {
+                                        sum = sum + n1 % 10;
+                                        n1 = parseInt(n1 / 10);
+                                    }
+                                    return sum;
+                                }
+
+                                // Driver code
+                                var n1 = 687;
+                                document.write(getSum(n1));
+
+                            </script>
+                                
+                        </pre>
+                    </code>
+                </div>
             </div>
 
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
-                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
-                    used
-                    for describing the look and formatting of a document written in HTML.</div>
+                <div class="question" onclick="toggleAnswer(36)">Q.36 Write a program you have to make a summation of
+                    first and last Digit. (E.g., 1234 Ans: -
+                    5) in JS? </div>
+                <div class="answer" id="answer36">
+                    <code>
+                        <pre>
+                            // Function to calculate the sum of the first and last digits of a number
+                            function calculateSumFirstLastDigit(number) {
+                                if (typeof number !== 'number' || isNaN(number)) {
+                                    return "Invalid input. Please provide a valid number.";
+                                }
+
+                                // Convert the number to a string to extract its digits
+                                const numString = String(Math.abs(number)); // Taking absolute value to handle negative numbers
+
+                                // Check if the number has only one digit
+                                if (numString.length === 1) {
+                                    return number * 2; // If only one digit, the sum is double the digit
+                                }
+
+                                // Calculate the sum of the first and last digits
+                                const firstDigit = parseInt(numString[0], 10);
+                                const lastDigit = parseInt(numString[numString.length - 1], 10);
+                                const sum = firstDigit + lastDigit;
+
+                                // If the original number was negative, make the sum negative as well
+                                return number < 0 ? -sum : sum;
+                            }
+
+                            // Example usage
+                            const inputNumber = 1234;
+                            const sumResult = calculateSumFirstLastDigit(inputNumber);
+                            console.log(`Number: ${inputNumber}`);
+                            console.log(`Sum of first and last digits: ${sumResult}`);
+                            <script>
+                                // Function to calculate the sum of the first and last digits of a number
+                            function calculateSumFirstLastDigit(number) {
+                                if (typeof number !== 'number' || isNaN(number)) {
+                                    return "Invalid input. Please provide a valid number.";
+                                }
+
+                                // Convert the number to a string to extract its digits
+                                const numString = String(Math.abs(number)); // Taking absolute value to handle negative numbers
+
+                                // Check if the number has only one digit
+                                if (numString.length === 1) {
+                                    return number * 2; // If only one digit, the sum is double the digit
+                                }
+
+                                // Calculate the sum of the first and last digits
+                                const firstDigit = parseInt(numString[0], 10);
+                                const lastDigit = parseInt(numString[numString.length - 1], 10);
+                                const sum = firstDigit + lastDigit;
+
+                                // If the original number was negative, make the sum negative as well
+                                return number < 0 ? -sum : sum;
+                            }
+
+                            // Example usage
+                            const inputNumber = 1234;
+                            const sumResult = calculateSumFirstLastDigit(inputNumber);
+                            document.write(`Number: ${inputNumber}`);
+                            document.write(`Sum of first and last digits: ${sumResult}`);
+
+                            </script>
+                        </pre>
+                    </code>
+                </div>
             </div>
 
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
-                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
-                    used
-                    for describing the look and formatting of a document written in HTML.</div>
+                <div class="question" onclick="toggleAnswer(37)">Q.37 Use console.log() and escape characters to print
+                    the following pattern in JS?<br>
+                    1 1 1 1 1 <br>
+                    2 1 2 4 8 <br>
+                    3 1 3 9 27 <br>
+                    4 1 4 16 64 <br>
+                    5 1 5 25 125</div>
+                <div class="answer" id="answer37">
+
+                    <code>
+                        <pre>
+                            // Function to print the specified pattern
+                            function printPattern(rows) {
+                                for (let i = 1; i <= rows; i++) {
+                                    let row = '';
+                                    for (let j = 1; j <= 5; j++) {
+                                        if (j === 1) {
+                                            row += `${i} `;
+                                        } else {
+                                            row += `${Math.pow(i, j)} `;
+                                        }
+                                    }
+                                    console.log(row);
+                                }
+                            }
+
+                            // Example usage
+                            printPattern(5);
+                            <script>
+                                // Function to print the specified pattern
+                            function printPattern(rows) {
+                                for (let i = 1; i <= rows; i++) {
+                                    let row = '';
+                                    for (let j = 1; j <= 5; j++) {
+                                        if (j === 1) {
+                                            row += `${i} `;
+                                        } else {
+                                            row += `${Math.pow(i, j)} `;
+                                        }
+                                        
+                                    }
+                                    
+                                    document.write("\n"+row);
+                                    
+                                }
+                            }
+
+                            // Example usage
+                            printPattern(5);
+
+                            </script> 
+
+                        </pre>
+                    </code>
+                </div>
             </div>
 
 
             <div class="qa-item">
-                <div class="question" onclick="toggleAnswer(2)">Q: What is CSS?</div>
-                <div class="answer" id="answer2">A: CSS stands for Cascading Style Sheets. It is a style sheet language
-                    used
-                    for describing the look and formatting of a document written in HTML.</div>
+                <div class="question" onclick="toggleAnswer(38)">Q.38 Use pattern in console.log in JS?
+                    <pre>
+                            1)  1
+                                1 0
+                                1 0 1
+                                1 0 1 0
+                                1 0 1 0 1 
+                            2)  A
+                                B C
+                                D E F
+                                G H I J
+                                K L M N O
+                            3)  1
+                                2 3
+                                4 5 6
+                                7 8 9 10
+                                11 12 13 14 15
+                            4)  *
+                                * *
+                                * * *
+                                * * * *
+                                * * * * *
+
+                        </pre>
+                </div>
+                <div class="answer" id="answer38">
+                    <code>
+                        <pre>
+                            1) // Numeric Pattern
+                            function printNumericPattern(rows) {
+                                for (let i = 1; i <= rows; i++) {
+                                    for (let j = 1; j <= i; j++) {
+                                        document.write(`${j} `);
+                                    }
+                                    document.write(" ");
+                                }
+                            }
+                            
+                            // Example usage
+                            document.write("<strong>1) Numeric Pattern:</strong> ");
+                            printNumericPattern(5);
+                            document.write(" ");
+
+                            <script>
+                                // Numeric Pattern
+                                function printNumericPattern(rows) {
+                                    for (let i = 1; i <= rows; i++) {
+                                        for (let j = 1; j <= i; j++) {
+                                            document.write(`${j} `);
+                                        }
+                                        document.write("<br>");
+                                    }
+                                }
+
+                                // Example usage
+                                document.write("<strong>1) Numeric Pattern:</strong><br>");
+                                printNumericPattern(5);
+                                document.write("<br>");
+                            </script>
+                            2) // Alphabetic Pattern
+                            function printAlphabeticPattern(rows) {
+                                let currentChar = 65; // ASCII code for 'A'
+                                for (let i = 1; i <= rows; i++) {
+                                    for (let j = 1; j <= i; j++) {
+                                        document.write(`${String.fromCharCode(currentChar)} `);
+                                        currentChar++;
+                                    }
+                                    document.write(" ");
+                                }
+                            }
+                            
+                            // Example usage
+                            document.write("<strong>2) Alphabetic Pattern:</strong> ");
+                            printAlphabeticPattern(5);
+                            document.write(" "");
+                            <script>
+                                // Alphabetic Pattern
+                                function printAlphabeticPattern(rows) {
+                                    let currentChar = 65; // ASCII code for 'A'
+                                    for (let i = 1; i <= rows; i++) {
+                                        for (let j = 1; j <= i; j++) {
+                                            document.write(`${String.fromCharCode(currentChar)} `);
+                                            currentChar++;
+                                        }
+                                        document.write("<br>");
+                                    }
+                                }
+
+                                // Example usage
+                                document.write("<strong>2) Alphabetic Pattern:</strong><br>");
+                                printAlphabeticPattern(5);
+                                document.write("<br>");
+
+                            </script> 
+                            3)// Numeric Triangle Pattern
+                            function printNumericTrianglePattern(rows) {
+                                let counter = 1;
+                                for (let i = 1; i <= rows; i++) {
+                                    for (let j = 1; j <= i; j++) {
+                                        document.write(`${counter} `);
+                                        counter++;
+                                    }
+                                    document.write(" ");
+                                }
+                            }
+                            
+                            // Example usage
+                            document.write("<strong>3) Numeric Triangle Pattern:</strong> ");
+                            printNumericTrianglePattern(5);
+                            document.write(" ");
+                            <script>
+                                // Numeric Triangle Pattern
+                                function printNumericTrianglePattern(rows) {
+                                    let counter = 1;
+                                    for (let i = 1; i <= rows; i++) {
+                                        for (let j = 1; j <= i; j++) {
+                                            document.write(`${counter} `);
+                                            counter++;
+                                        }
+                                        document.write("<br>");
+                                    }
+                                }
+
+                                // Example usage
+                                document.write("<strong>3) Numeric Triangle Pattern:</strong><br>");
+                                printNumericTrianglePattern(5);
+                                document.write("<br>");
+
+                            </script>    
+                            4)// Asterisk Triangle Pattern
+                            function printAsteriskTrianglePattern(rows) {
+                                for (let i = 1; i <= rows; i++) {
+                                    for (let j = 1; j <= i; j++) {
+                                        document.write("* ");
+                                    }
+                                    document.write(" ");
+                                }
+                            }
+                            
+                            // Example usage
+                            document.write("<strong>4) Asterisk Triangle Pattern:</strong> ");
+                            printAsteriskTrianglePattern(5);
+                            <script>
+                                // Asterisk Triangle Pattern
+                                function printAsteriskTrianglePattern(rows) {
+                                    for (let i = 1; i <= rows; i++) {
+                                        for (let j = 1; j <= i; j++) {
+                                            document.write("* ");
+                                        }
+                                        document.write("<br>");
+                                    }
+                                }
+
+                                // Example usage
+                                document.write("<strong>4) Asterisk Triangle Pattern:</strong><br>");
+                                printAsteriskTrianglePattern(5);
+
+                            </script>                                                                               
+                        </pre>
+                    </code>
+                </div>
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(39)">Q.39 Accept 3 numbers from user using while loop and check each numbers palindrome? 
+                    </div>
+                    <div class="answer" id="answer39">
+                        <code>
+                            <pre>
+                                // Function to check if a number is a palindrome
+                                function isPalindrome(number) {
+                                    const originalString = String(number);
+                                    const reversedString = originalString.split('').reverse().join('');
+                                    return originalString === reversedString;
+                                }
+
+                                // Accept 3 numbers from the user and check if each is a palindrome
+                                let count = 1;
+                                while (count <= 3) {
+                                    const userInput = prompt(`Enter number ${count}:`);
+                                    
+                                    // Convert the user input to a number
+                                    const userNumber = parseInt(userInput, 10);
+
+                                    // Check if the entered number is a palindrome
+                                    if (!isNaN(userNumber)) {
+                                        if (isPalindrome(userNumber)) {
+                                            console.log(`${userNumber} is a palindrome.`);
+                                        } else {
+                                            console.log(`${userNumber} is not a palindrome.`);
+                                        }
+                                        count++;
+                                    } else {
+                                        console.log("Invalid input. Please enter a valid number.");
+                                    }
+                                }   
+
+                                <script>
+                                    // Function to check if a number is a palindrome
+                                function isPalindrome(number) {
+                                    const originalString = String(number);
+                                    const reversedString = originalString.split('').reverse().join('');
+                                    return originalString === reversedString;
+                                }
+
+                                // Accept 3 numbers from the user and check if each is a palindrome
+                                let count = 1;
+                                
+                                    const userNumber = 303;
+                                while (count <= 1) {
+                                    
+
+                                    // Check if the entered number is a palindrome
+                                    if (!isNaN(userNumber)) {
+                                        if (isPalindrome(userNumber)) {
+                                            document.write(`${userNumber} is a palindrome.`);
+                                        } else {
+                                            document.write(`${userNumber} is not a palindrome.`);
+                                        }
+                                        count++;
+                                    } else {
+                                        document.write("Invalid input. Please enter a valid number.");
+                                    }
+                                }
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
+                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="answer" id="answer34">
+                        <code>
+                            <pre>
+                                let n = 123456789;
+                                let a = n.toString().split('').reverse().join('');
+                                document.write(a);
+                                <script>
+                                    let n = 123456789;
+                                    let ans = n.toString().split('').reverse().join('');
+                                    document.write(ans);
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
+                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="answer" id="answer34">
+                        <code>
+                            <pre>
+                                let n = 123456789;
+                                let a = n.toString().split('').reverse().join('');
+                                document.write(a);
+                                <script>
+                                    let n = 123456789;
+                                    let ans = n.toString().split('').reverse().join('');
+                                    document.write(ans);
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
+                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="answer" id="answer34">
+                        <code>
+                            <pre>
+                                let n = 123456789;
+                                let a = n.toString().split('').reverse().join('');
+                                document.write(a);
+                                <script>
+                                    let n = 123456789;
+                                    let ans = n.toString().split('').reverse().join('');
+                                    document.write(ans);
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
+                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="answer" id="answer34">
+                        <code>
+                            <pre>
+                                let n = 123456789;
+                                let a = n.toString().split('').reverse().join('');
+                                document.write(a);
+                                <script>
+                                    let n = 123456789;
+                                    let ans = n.toString().split('').reverse().join('');
+                                    document.write(ans);
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
+                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="answer" id="answer34">
+                        <code>
+                            <pre>
+                                let n = 123456789;
+                                let a = n.toString().split('').reverse().join('');
+                                document.write(a);
+                                <script>
+                                    let n = 123456789;
+                                    let ans = n.toString().split('').reverse().join('');
+                                    document.write(ans);
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
+                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="answer" id="answer34">
+                        <code>
+                            <pre>
+                                let n = 123456789;
+                                let a = n.toString().split('').reverse().join('');
+                                document.write(a);
+                                <script>
+                                    let n = 123456789;
+                                    let ans = n.toString().split('').reverse().join('');
+                                    document.write(ans);
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
+                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="answer" id="answer34">
+                        <code>
+                            <pre>
+                                let n = 123456789;
+                                let a = n.toString().split('').reverse().join('');
+                                document.write(a);
+                                <script>
+                                    let n = 123456789;
+                                    let ans = n.toString().split('').reverse().join('');
+                                    document.write(ans);
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
+                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="answer" id="answer34">
+                        <code>
+                            <pre>
+                                let n = 123456789;
+                                let a = n.toString().split('').reverse().join('');
+                                document.write(a);
+                                <script>
+                                    let n = 123456789;
+                                    let ans = n.toString().split('').reverse().join('');
+                                    document.write(ans);
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
+                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="answer" id="answer34">
+                        <code>
+                            <pre>
+                                let n = 123456789;
+                                let a = n.toString().split('').reverse().join('');
+                                document.write(a);
+                                <script>
+                                    let n = 123456789;
+                                    let ans = n.toString().split('').reverse().join('');
+                                    document.write(ans);
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
             </div>
 
         </div>
