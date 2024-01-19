@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js Assignment</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -50,10 +51,16 @@
         }
 
         .answer {
+            background-color: #f4f4f4;
+            border-radius: 20px;
+            padding: 10px;
             font-size: 16px;
             color: #555;
             margin-bottom: 8px;
             display: none;
+        }
+        pre{
+            white-space: pre-wrap;
         }
     </style>
 </head>
@@ -941,14 +948,9 @@
                             }
 
                             // Example usage
-                            const result1 = checkNumber(5);
-                            document.write(`\nResult for 5: ${result1}\n`); // Output: Positive
+                            const b = checkNumber(5);
+                            document.write(`\nResult for 5: ${b}\n`); // Output: Positive
                             
-                            const result2 = checkNumber(-3);
-                            document.write(`Result for -3: ${result2}\n`); // Output: Negative
-                            
-                            const result3 = checkNumber(0);
-                            document.write(`Result for 0: ${result3}\n`); // Output: Zero
                             
                             </script>
                         </pre>
@@ -1762,7 +1764,8 @@
                 </div>
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(39)">Q.39 Accept 3 numbers from user using while loop and check each numbers palindrome? 
+                    <div class="question" onclick="toggleAnswer(39)">Q.39 Accept 3 numbers from user using while loop
+                        and check each numbers palindrome?
                     </div>
                     <div class="answer" id="answer39">
                         <code>
@@ -1831,18 +1834,32 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
-                        number = 64728 ---> reverse =82746 in JS? </div>
-                    <div class="answer" id="answer34">
+                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
+                        current day and time in the following format.
+                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    </div>
+                    <div class="answer" id="answer40">
                         <code>
                             <pre>
-                                let n = 123456789;
-                                let a = n.toString().split('').reverse().join('');
-                                document.write(a);
+                                var date = new Date();
+                                var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                                let day = days[date.getDay()];
+                                var time=date.getHours();
+                                var minutes=date.getMinutes();
+                                var second=date.getSeconds();
+                                var milsec=date.getMilliseconds();
+                                document.write("Today is " +day+ ". current time is "+time+"Pm: "+minutes+" : "+second+" "+milsec);
+
                                 <script>
-                                    let n = 123456789;
-                                    let ans = n.toString().split('').reverse().join('');
-                                    document.write(ans);
+                                    var date = new Date();
+                                    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                                    let day = days[date.getDay()];
+                                    var time = date.getHours();
+                                    var minutes = date.getMinutes();
+                                    var second = date.getSeconds();
+                                    var milsec = date.getMilliseconds();
+                                    document.write("Today is " + day + ". current time is " + time + "Pm: " + minutes + " : " + second + " " + milsec);
+
                                 </script>
                             </pre>
                         </code>
@@ -1851,18 +1868,32 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
-                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="question" onclick="toggleAnswer(40)">Q.41 Write a JavaScript program to get the current
+                        date?
+                    </div>
                     <div class="answer" id="answer34">
                         <code>
                             <pre>
-                                let n = 123456789;
-                                let a = n.toString().split('').reverse().join('');
-                                document.write(a);
+                                
                                 <script>
-                                    let n = 123456789;
-                                    let ans = n.toString().split('').reverse().join('');
-                                    document.write(ans);
+                                    
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
+                        current day and time in the following format.
+                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    </div>
+                    <div class="answer" id="answer34">
+                        <code>
+                            <pre>
+                                
+                                <script>
+
                                 </script>
                             </pre>
                         </code>
@@ -1871,18 +1902,16 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
-                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
+                        current day and time in the following format.
+                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    </div>
                     <div class="answer" id="answer34">
                         <code>
                             <pre>
-                                let n = 123456789;
-                                let a = n.toString().split('').reverse().join('');
-                                document.write(a);
+                                
                                 <script>
-                                    let n = 123456789;
-                                    let ans = n.toString().split('').reverse().join('');
-                                    document.write(ans);
+
                                 </script>
                             </pre>
                         </code>
@@ -1891,18 +1920,16 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
-                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
+                        current day and time in the following format.
+                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    </div>
                     <div class="answer" id="answer34">
                         <code>
                             <pre>
-                                let n = 123456789;
-                                let a = n.toString().split('').reverse().join('');
-                                document.write(a);
+                                
                                 <script>
-                                    let n = 123456789;
-                                    let ans = n.toString().split('').reverse().join('');
-                                    document.write(ans);
+
                                 </script>
                             </pre>
                         </code>
@@ -1911,39 +1938,16 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
-                        number = 64728 ---> reverse =82746 in JS? </div>
-                    <div class="answer" id="answer34">
-                        <code>
-                            <pre>
-                                let n = 123456789;
-                                let a = n.toString().split('').reverse().join('');
-                                document.write(a);
-                                <script>
-                                    let n = 123456789;
-                                    let ans = n.toString().split('').reverse().join('');
-                                    document.write(ans);
-                                </script>
-                            </pre>
-                        </code>
+                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
+                        current day and time in the following format.
+                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
                     </div>
-                </div>
-
-
-
-                <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
-                        number = 64728 ---> reverse =82746 in JS? </div>
                     <div class="answer" id="answer34">
                         <code>
                             <pre>
-                                let n = 123456789;
-                                let a = n.toString().split('').reverse().join('');
-                                document.write(a);
+                                
                                 <script>
-                                    let n = 123456789;
-                                    let ans = n.toString().split('').reverse().join('');
-                                    document.write(ans);
+
                                 </script>
                             </pre>
                         </code>
@@ -1952,18 +1956,16 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
-                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
+                        current day and time in the following format.
+                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    </div>
                     <div class="answer" id="answer34">
                         <code>
                             <pre>
-                                let n = 123456789;
-                                let a = n.toString().split('').reverse().join('');
-                                document.write(a);
+                                
                                 <script>
-                                    let n = 123456789;
-                                    let ans = n.toString().split('').reverse().join('');
-                                    document.write(ans);
+
                                 </script>
                             </pre>
                         </code>
@@ -1972,18 +1974,16 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
-                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
+                        current day and time in the following format.
+                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    </div>
                     <div class="answer" id="answer34">
                         <code>
                             <pre>
-                                let n = 123456789;
-                                let a = n.toString().split('').reverse().join('');
-                                document.write(a);
+                                
                                 <script>
-                                    let n = 123456789;
-                                    let ans = n.toString().split('').reverse().join('');
-                                    document.write(ans);
+
                                 </script>
                             </pre>
                         </code>
@@ -1992,35 +1992,45 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(34)">Q.34 Write to print number in reverse order e.g.:
-                        number = 64728 ---> reverse =82746 in JS? </div>
+                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
+                        current day and time in the following format.
+                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    </div>
                     <div class="answer" id="answer34">
                         <code>
                             <pre>
-                                let n = 123456789;
-                                let a = n.toString().split('').reverse().join('');
-                                document.write(a);
+                                
                                 <script>
-                                    let n = 123456789;
-                                    let ans = n.toString().split('').reverse().join('');
-                                    document.write(ans);
+
                                 </script>
                             </pre>
                         </code>
                     </div>
                 </div>
 
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
+                        current day and time in the following format.
+                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    </div>
+                    <div class="answer" id="answer34">
+                        <code>
+                            <pre>
+                                
+                                <script>
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
 
             </div>
 
         </div>
+        <script src="script.js"></script>
 
-        <script>
-            function toggleAnswer(id) {
-                var answer = document.getElementById("answer" + id);
-                answer.style.display = (answer.style.display === "none") ? "block" : "none";
-            }
-        </script>
 </body>
 
 </html>
