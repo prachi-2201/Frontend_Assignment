@@ -59,7 +59,8 @@
             margin-bottom: 8px;
             display: none;
         }
-        pre{
+
+        pre {
             white-space: pre-wrap;
         }
     </style>
@@ -1868,15 +1869,17 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(40)">Q.41 Write a JavaScript program to get the current
+                    <div class="question" onclick="toggleAnswer(41)">Q.41 Write a JavaScript program to get the current
                         date?
                     </div>
-                    <div class="answer" id="answer34">
+                    <div class="answer" id="answer41">
                         <code>
                             <pre>
-                                
+                                var d=new Date()
+                                console.log(d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear())
                                 <script>
-                                    
+                                    var d = new Date()
+                                    document.write(d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear())
                                 </script>
                             </pre>
                         </code>
@@ -1884,34 +1887,23 @@
                 </div>
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
-                        current day and time in the following format.
-                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    <div class="question" onclick="toggleAnswer(42)">Q.42 Write a JavaScript program to compare two
+                        objects?
                     </div>
-                    <div class="answer" id="answer34">
+                    <div class="answer" id="answer42">
                         <code>
                             <pre>
-                                
+                                const Fruit1 = { fruit: 'kiwi' }; // Creating Fruit1 object
+                                    const Fruit2 = { fruit: 'kiwi' }; // Creating Fruit2 object
+
+                                    // Performing JSON.Stringify and === operator
+                                    document.write(JSON.stringify(Fruit1) === JSON.stringify(Fruit2));
                                 <script>
+                                    const Fruit1 = { fruit: 'kiwi' }; // Creating Fruit1 object
+                                    const Fruit2 = { fruit: 'kiwi' }; // Creating Fruit2 object
 
-                                </script>
-                            </pre>
-                        </code>
-                    </div>
-                </div>
-
-
-                <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
-                        current day and time in the following format.
-                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
-                    </div>
-                    <div class="answer" id="answer34">
-                        <code>
-                            <pre>
-                                
-                                <script>
-
+                                    // Performing JSON.Stringify and === operator
+                                    document.write(JSON.stringify(Fruit1) === JSON.stringify(Fruit2));
                                 </script>
                             </pre>
                         </code>
@@ -1920,16 +1912,139 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
-                        current day and time in the following format.
-                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    <div class="question" onclick="toggleAnswer(43)">Q.43 Write a JavaScript program to convert an array
+                        of objects into CSV string?
                     </div>
-                    <div class="answer" id="answer34">
+                    <div class="answer" id="answer43">
                         <code>
                             <pre>
-                                
-                                <script>
+                                const objectToCsv = function (data) {
 
+                                    const csvRows = [];
+
+                                    /* Get headers as every csv data format 
+                                    has header (head means column name)
+                                    so objects key is nothing but column name 
+                                    for csv data using Object.key() function.
+                                    We fetch key of object as column name for 
+                                    csv */
+                                    const headers = Object.keys(data[0]);
+
+                                    /* Using push() method we push fetched 
+                                       data into csvRows[] array */
+                                    csvRows.push(headers.join(','));
+
+                                    // Loop to get value of each objects key
+                                    for (const row of data) {
+                                        const values = headers.map(header => {
+                                            const val = row[header]
+                                            return `"${val}"`;
+                                        });
+
+                                        // To add, separator between each value
+                                        csvRows.push(values.join(','));
+                                    }
+
+                                    /* To add new line for each objects values
+                                       and this return statement array csvRows
+                                       to this function.*/
+                                    return csvRows.join('\n');
+                                };
+
+                                const data = [{
+                                    "firstname": "geeks",
+                                    "lastname": "org",
+                                    "age": 12
+                                },
+                                {
+                                    "firstname": "devendra",
+                                    "lastname": "salunke",
+                                    "age": 31
+                                },
+                                {
+                                    "firstname": "virat",
+                                    "lastname": "kohli",
+                                    "age": 34
+                                },
+                                ];
+
+                                // Data passed as parameter 
+                                const csvData = objectToCsv(data);
+                                document.writeln(csvData);  
+                                <script>
+                                    const objectToCsv = function (data) {
+
+                                        const csvRows = [];
+
+                                        /* Get headers as every csv data format 
+                                        has header (head means column name)
+                                        so objects key is nothing but column name 
+                                        for csv data using Object.key() function.
+                                        We fetch key of object as column name for 
+                                        csv */
+                                        const headers = Object.keys(data[0]);
+
+                                        /* Using push() method we push fetched 
+                                           data into csvRows[] array */
+                                        csvRows.push(headers.join(','));
+
+                                        // Loop to get value of each objects key
+                                        for (const row of data) {
+                                            const values = headers.map(header => {
+                                                const val = row[header]
+                                                return `"${val}"`;
+                                            });
+
+                                            // To add, separator between each value
+                                            csvRows.push(values.join(','));
+                                        }
+
+                                        /* To add new line for each objects values
+                                           and this return statement array csvRows
+                                           to this function.*/
+                                        return csvRows.join('\n');
+                                    };
+
+                                    const data = [{
+                                        "firstname": "geeks",
+                                        "lastname": "org",
+                                        "age": 12
+                                    },
+                                    {
+                                        "firstname": "devendra",
+                                        "lastname": "salunke",
+                                        "age": 31
+                                    },
+                                    {
+                                        "firstname": "virat",
+                                        "lastname": "kohli",
+                                        "age": 34
+                                    },
+                                    ];
+
+                                    // Data passed as parameter 
+                                    const csvData = objectToCsv(data);
+                                    document.writeln(csvData);  
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(44)">Q.44 Write a JavaScript program to capitalize first letter of a string?
+                    </div>
+                    <div class="answer" id="answer44">
+                        <code>
+                            <pre>
+                                    var str="prachi"
+                                    var char=str[0];
+                                    document.write(char.toUpperCase()+str.slice(1))
+                                <script>
+                                    var str="prachi"
+                                    var char=str[0];
+                                    document.write(char.toUpperCase()+str.slice(1))
                                 </script>
                             </pre>
                         </code>
