@@ -2033,7 +2033,8 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(44)">Q.44 Write a JavaScript program to capitalize first letter of a string?
+                    <div class="question" onclick="toggleAnswer(44)">Q.44 Write a JavaScript program to capitalize first
+                        letter of a string?
                     </div>
                     <div class="answer" id="answer44">
                         <code>
@@ -2042,9 +2043,9 @@
                                     var char=str[0];
                                     document.write(char.toUpperCase()+str.slice(1))
                                 <script>
-                                    var str="prachi"
-                                    var char=str[0];
-                                    document.write(char.toUpperCase()+str.slice(1))
+                                    var str = "prachi"
+                                    var char = str[0];
+                                    document.write(char.toUpperCase() + str.slice(1))
                                 </script>
                             </pre>
                         </code>
@@ -2053,11 +2054,190 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
-                        current day and time in the following format.
-                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    <div class="question" onclick="toggleAnswer(45)">Q. 45 Write a JavaScript program to determine if a
+                        variable is array?
                     </div>
-                    <div class="answer" id="answer34">
+                    <div class="answer" id="answer45">
+                        <code>
+                            <pre>
+                                let arr = [10, 20, 30, 40];
+                                document.write("Output for Array: " + Array.isArray(arr));
+                                <script>
+                                    let arr = [10, 20, 30, 40];
+                                    document.write("Output for Array: " + Array.isArray(arr));
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(46)">Q.46 Write a JavaScript program to clone an array?
+                    </div>
+                    <div class="answer" id="answer46">
+                        <code>
+                            <pre>
+                                    const originalArray = [1, 2, 3];
+                                    const clonedArray = [...originalArray];
+                                    document.write(clonedArray);
+                                <script>
+                                    const originalArray = [1, 2, 3];
+                                    const clonedArray = [...originalArray];
+                                    document.write(clonedArray);
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(47)">Q.47 What is the drawback of declaring methods
+                        directly in JavaScript objects?
+                    </div>
+                    <div class="answer" id="answer47">
+
+                        <p>One drawback of declaring methods directly in JavaScript objects is that it leads to code
+                            duplication if the method is intended to be shared among multiple instances of the object.
+                            When you define a method directly within an object, each instance of that object gets its
+                            own
+                            copy of the method. This can result in increased memory consumption and can be less
+                            efficient
+                            than if the method were shared among all instances through the prototype chain.</p>
+
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(48)">Q.48 Print the length of the string on the browser
+                        console using console.log()?
+                    </div>
+                    <div class="answer" id="answer48">
+                        <code>
+                            <pre>
+                                var str1 = "Prachi"
+                                console.log("string " + str1 + " length is " + str1.length);
+                                <br>
+                                <script>
+                                    var str1 = "Prachi"
+                                    document.write("string " + str1 + " length is " + str1.length);
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(49)">Q.49 Change all the string characters to capital
+                        letters using toUpperCase() method?
+                    </div>
+                    <div class="answer" id="answer49">
+                        <code>
+                            <pre>
+                                var str1 = "prachi"
+                                document.write("string " + str1 + " uppercase is " + str1.toUpperCase());
+
+                                <script>
+                                    var str1 = "prachi"
+                                    document.write("string " + str1 + " uppercase is " + str1.toUpperCase());
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(50)">Q.50 What is the drawback of declaring methods
+                        directly in JavaScript objects?
+                    </div>
+                    <div class="answer" id="answer50">
+                        <p>One drawback of declaring methods directly in JavaScript objects is that it leads to code
+                            duplication if the method is intended to be shared among multiple instances of the object.
+                            When you define a method directly within an object, each instance of that object gets its
+                            own
+                            copy of the method. This can result in increased memory consumption and can be less
+                            efficient
+                            than if the method were shared among all instances through the prototype chain.</p>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(51)">Q.51 Write a JavaScript program to get the current
+                        date. Expected Output : mm-dd-yyyy,
+                        mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy?
+                    </div>
+                    <div class="answer" id="answer51">
+                        <code>
+                            <pre>
+                                var d=new Date()
+                                console.log(d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear())
+                                <br>
+                                <script>
+                                    var d = new Date()
+                                    document.write(d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear())
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(52)">Q.52 Use indexOf to determine the position of the
+                        first occurrence of a in 30 Days Of
+                        JavaScript?
+                    </div>
+                    <div class="answer" id="answer52">
+                        <code>
+                            <pre>
+                                var text = "30 Days Of JavaScript";
+                                console.log("Position of 'a':",text.indexOf('a'));
+                                <br>
+                                <script>
+                                    var text = "30 Days Of JavaScript";
+                                    document.write("Position of 'a':", text.indexOf('a'));
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(53)">Q.53 Use lastIndexOf to determine the position of
+                        the last occurrence of a in 30 Days Of
+                        JavaScript?
+                    </div>
+                    <div class="answer" id="answer53">
+                        <code>
+                            <pre>
+                                var text = "30 Days Of JavaScript";
+                                console.write("Position of 'a':", text.lastIndexOf('a'));
+                                <br>
+                                <script>
+                                    var text = "30 Days Of JavaScript";
+                                    document.write("Position of 'a':", text.lastIndexOf('a'));
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(54)">Q.54 Form Validtion in JS?
+                    </div>
+                    <div class="answer" id="answer54">
                         <code>
                             <pre>
                                 
@@ -2071,11 +2251,9 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
-                        current day and time in the following format.
-                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    <div class="question" onclick="toggleAnswer(55)">Q.55 Form in Email, number, Password, Validation?
                     </div>
-                    <div class="answer" id="answer34">
+                    <div class="answer" id="answer55">
                         <code>
                             <pre>
                                 
@@ -2089,11 +2267,248 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
-                        current day and time in the following format.
-                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    <div class="question" onclick="toggleAnswer(56)">Q.56 Dynamic Form Validation in JS?
                     </div>
-                    <div class="answer" id="answer34">
+                    <div class="answer" id="answer56">
+                        <code>
+                            <pre>
+                                
+                                <script>
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(57)">Q.57 how many type of JS Event? How to use it?
+                    </div>
+                    <div class="answer" id="answer57">
+                        <p> In JavaScript, there are several types of events that can occur in the browser, and you can
+                            use them to trigger functions or behaviors in response to user actions or other
+                            interactions. Here are some common types of JavaScript events:
+                        </p>
+                        <ul>
+                            <li>Mouse Events:</li>
+
+                            <ul>
+                                <li>click: Occurs when the mouse button is clicked.</li>
+                                <li> dblclick: Occurs when the mouse button is double-clicked.</li>
+                                <li>mousedown, mouseup: Occur when the mouse button is pressed down or released.</li>
+                                <li>mousemove: Occurs when the mouse pointer is moved.</li>
+                            </ul>
+
+                            <li>Keyboard Events:</li>
+
+                            <ul>
+                                <li>keydown, keyup: Occur when a key on the keyboard is pressed down or released.</li>
+                                <li>keypress: Occurs when a key that produces a character value is pressed down.</li>
+                            </ul>
+
+                            <li>Form Events:</li>
+
+                            <ul>
+                                <li>submit: Occurs when a form is submitted.</li>
+                                <li>reset: Occurs when a form is reset.</li>
+                                <li>change: Occurs when the value of an input element changes.</li>
+                                <li>focus, blur: Occur when an element gains or loses focus.</li>
+                            </ul>
+
+                            <li>Window Events:</li>
+
+                            <ul>
+                                <li>load: Occurs when the document and its resources (like images and stylesheets) have
+                                    finished
+                                    loading.</li>
+                                <li>unload: Occurs when the user leaves the page.</li>
+                                <li>resize: Occurs when the browser window is resized.</li>
+                                <li>scroll: Occurs when the document view or an element is scrolled.</li>
+                            </ul>
+
+
+                            <li>Event Delegation:</li>
+
+                            <ul>
+                                <li>Events like mouseenter, mouseleave, and others related to event delegation can be
+                                    used to
+                                    handle events on multiple elements with a single event listener on a common
+                                    ancestor.</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(59)">Q.59 What is Bom vs Dom in JS?
+                    </div>
+                    <div class="answer" id="answer59">
+                        <p>
+                            BOM (Browser Object Model) and DOM (Document Object Model) are two different but closely
+                            related concepts in JavaScript that deal with interacting with web browsers.
+                        </p>
+                        <ol>
+                            <li>DOM (Document Object Model):</li>
+                            <ul>
+                                <li>The DOM is a programming interface provided by browsers that represents the
+                                    structure of a document as a tree of objects. These objects can be manipulated using
+                                    JavaScript to change the content, structure, and style of a web page.</li>
+                                <li>The DOM represents the HTML or XML document as a tree structure, where each element,
+                                    attribute, and piece of text in the document is a node in the tree.</li>
+                                <li>JavaScript interacts with the DOM to dynamically update or manipulate the content
+                                    and structure of a web page. For example, you can use DOM methods to create, modify,
+                                    or delete elements on a page.</li>
+                            </ul>
+                            <li>BOM (Browser Object Model):</li>
+                            <ul>
+                                <li>The BOM, on the other hand, represents additional objects provided by the browser to
+                                    interact with the browser itself, rather than the document.</li>
+                                <li>The BOM includes objects such as window, navigator, screen, location, history, and
+                                    document (which is also part of the DOM).</li>
+                                <li>The window object, in particular, is a top-level object in the BOM and represents
+                                    the browser window. It provides methods and properties for manipulating the browser,
+                                    such as opening new windows, setting timeouts, and handling events related to the
+                                    window.</li>
+                                <li>Unlike the DOM, the BOM is not standardized, and its features can vary between
+                                    different browsers.</li>
+                            </ul>
+                        </ol>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(60)">Q.60 Array vs object defences in JS?
+                    </div>
+                    <div class="answer" id="answer60">
+                        <h4>Array</h4>
+                        <p>An Array is a collection of data and a data structure that is stored in a sequence of memory
+                            locations. One can access the elements of an array by calling the index number such as 0, 1,
+                            2, 3, …, etc. The array can store data types like Integer, Float, String, and Boolean all
+                            the primitive data types can be stored in an array.</p>
+                        <code>
+                            <pre>
+                                let Arr = [1, 2, 3, 4, 5];
+
+                                // Iterating through loop
+                                for (let i = 0; i < Arr.length; i++) {
+                                    console.log(Arr[i]);
+                                }
+
+                                // Pop an element from array
+                                Arr.pop();
+                                console.log("After using pop() Method: " + Arr);
+
+                            </pre>
+                        </code>
+
+                        <h4>Objects</h4>
+                        <p>It stores multiple values in a single variable. The object can contain anything in the real
+                            world such as person names, cars, and game characters. Objects are very easy to use in some
+                            situations if you know where the data is being processed. The character set of objects is
+                            known as Properties. The properties of an object can be called by using DOT notation and []
+                            notation.</p>
+                        <code>
+                            <pre>
+                                const person = {
+                                name: 'John',
+                                age: 30,
+                                email: 'john@example.com'
+                              };
+                              const car = {
+                                make: 'Toyota',
+                                model: 'Camry',
+                                year: 2022
+                              };
+                              </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(61)">Q.61 Split the string into an array using split()
+                        Method?
+                    </div>
+                    <div class="answer" id="answer61">
+                        <p>The split method splits a string into an array of strings. It takes an argument for the
+                            delimiter, which can be a character to use to break up the string or a regular expression.
+                            For example, if the delimiter is a space, you get an array of words, and if the delimiter is
+                            an empty string, you get an array of each character in the string.
+
+                            Ex: Here we use split one string by spaces, then another by digits using a regular
+                            expression:</p>
+                        <code>
+                            <pre>
+                                // Example string
+                                var myString = "Hello,World,How,Are,You";
+
+                                // Split the string into an array using the comma as a separator
+                                var myArray = myString.split(',');
+
+                                // Display the resulting array
+                                document.write(myArray);
+                                <br>
+                                <script>
+                                    // Example string
+                                    var myString = "Hello,World,How,Are,You";
+
+                                    // Split the string into an array using the comma as a separator
+                                    var myArray = myString.split(',');
+
+                                    // Display the resulting array
+                                    document.write(myArray);
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(62)">Q.62 Check if the string contains a word Script
+                        using includes() method?
+                    </div>
+                    <div class="answer" id="answer62">
+                        <p>In JavaScript, you can use the includes() method to check if a string contains a specific
+                            substring. Here's an example to check if the string contains the word "Script":</p>
+                        <br>
+                        <code>
+                            <pre>
+                                // Example string
+                                var myString = "This is a JavaScript Script example";
+
+                                // Check if the string contains the word "Script"
+                                var containsScript = myString.includes("Script");
+
+                                // Display the result
+                                document.write(containsScript);
+                                <br>     
+                                <script>
+                                    // Example string
+                                    var myString = "This is a JavaScript Script example";
+
+                                    // Check if the string contains the word "Script"
+                                    var containsScript = myString.includes("Script");
+
+                                    // Display the result
+                                    document.write(containsScript);
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(63)">Q.63 Change all the string characters to lowercase letters using toLowerCase() Method.
+                    </div>
+                    <div class="answer" id="answer63">
                         <code>
                             <pre>
                                 
@@ -2107,11 +2522,10 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
-                        current day and time in the following format.
-                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    <div class="question" onclick="toggleAnswer(40)">Q.49 Change all the string characters to capital
+                        letters using toUpperCase() method?
                     </div>
-                    <div class="answer" id="answer34">
+                    <div class="answer" id="answer49">
                         <code>
                             <pre>
                                 
@@ -2125,11 +2539,10 @@
 
 
                 <div class="qa-item">
-                    <div class="question" onclick="toggleAnswer(40)">Q.40 Write a JavaScript Program to display the
-                        current day and time in the following format.
-                        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+                    <div class="question" onclick="toggleAnswer(40)">Q.49 Change all the string characters to capital
+                        letters using toUpperCase() method?
                     </div>
-                    <div class="answer" id="answer34">
+                    <div class="answer" id="answer49">
                         <code>
                             <pre>
                                 
@@ -2141,6 +2554,141 @@
                     </div>
                 </div>
 
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(40)">Q.49 Change all the string characters to capital
+                        letters using toUpperCase() method?
+                    </div>
+                    <div class="answer" id="answer49">
+                        <code>
+                            <pre>
+                                
+                                <script>
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(40)">Q.49 Change all the string characters to capital
+                        letters using toUpperCase() method?
+                    </div>
+                    <div class="answer" id="answer49">
+                        <code>
+                            <pre>
+                                
+                                <script>
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(40)">Q.49 Change all the string characters to capital
+                        letters using toUpperCase() method?
+                    </div>
+                    <div class="answer" id="answer49">
+                        <code>
+                            <pre>
+                                
+                                <script>
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(40)">Q.49 Change all the string characters to capital
+                        letters using toUpperCase() method?
+                    </div>
+                    <div class="answer" id="answer49">
+                        <code>
+                            <pre>
+                                
+                                <script>
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(40)">Q.49 Change all the string characters to capital
+                        letters using toUpperCase() method?
+                    </div>
+                    <div class="answer" id="answer49">
+                        <code>
+                            <pre>
+                                
+                                <script>
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(40)">Q.49 Change all the string characters to capital
+                        letters using toUpperCase() method?
+                    </div>
+                    <div class="answer" id="answer49">
+                        <code>
+                            <pre>
+                                
+                                <script>
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(40)">Q.49 Change all the string characters to capital
+                        letters using toUpperCase() method?
+                    </div>
+                    <div class="answer" id="answer49">
+                        <code>
+                            <pre>
+                                
+                                <script>
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+
+
+                <div class="qa-item">
+                    <div class="question" onclick="toggleAnswer(40)">Q.49 Change all the string characters to capital
+                        letters using toUpperCase() method?
+                    </div>
+                    <div class="answer" id="answer49">
+                        <code>
+                            <pre>
+                                
+                                <script>
+
+                                </script>
+                            </pre>
+                        </code>
+                    </div>
+                </div>
             </div>
 
         </div>
