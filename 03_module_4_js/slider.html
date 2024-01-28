@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 50px;
+        }
+
+        img {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <img class="img" src="../image1.jpg" alt="">
+        <img class="img" src="../image2.jpg" alt="">
+        <img class="img" src="../image3.jpg" alt="">
+    </div>
+    <div class="slider">
+        <button onclick="prev()">previous</button>
+        <button onclick="next()">Next</button>
+    </div>
+
+    <script>
+        var img = document.getElementsByClassName("img")
+
+
+        counter = 0
+        function next() {
+            for (i = 0; i < img.length; i++) {
+                img[i].style.width = "400px"
+
+            }
+
+            if (img.length <= counter) {
+                counter = 0
+            }
+            img[counter].style.width = "500px"
+
+            // console.log("counter",counter);
+            // console.log("SliderImages.length",SliderImages.length);
+            // console.log(counter);
+            counter++
+
+
+        }
+        function prev() {
+            for (i = 0; i < img.length; i++) {
+                img[i].style.width = "400px"
+
+            }
+            counter--;
+            if (img.length <= counter) {
+                counter = 0
+            }
+            img[counter].style.width = "500px"
+
+        }
+    </script>
+</body>
+
+</html>

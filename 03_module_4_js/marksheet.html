@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Marksheet</h1>
+    <h2>Enter marks</h2>
+    <form action="">
+        <label for="lang">C language : </label>
+        <input type="text" name="num1" id="n1">
+        <br>
+        <label for="lang">C++ language: </label>
+        <input type="text" name="num2" id="n2">
+        <br>
+        <label for="lang">Database: </label>
+        <input type="text" name="num3" id="n3">
+        <br>
+        <label for="lang">HTML: </label>
+        <input type="text" name="num4" id="n4">
+        <br>
+        <label for="lang">CSS: </label>
+        <input type="text" name="num5" id="n5">
+        <br>
+        <label for="lang">PHP: </label>
+        <input type="text" name="num6" id="n6">
+        <br>
+        <label for="lang">Java: </label>
+        <input type="text" name="num7" id="n7">
+        <br>
+        <button onclick="add()">Result</button>
+        
+    </form>
+    <h4 id="result"></h4>
+    <h4 id="percentage"></h4>
+
+    <script>
+
+       
+        var ans=document.getElementById("result");
+        var per=document.getElementById("percentage");
+        function add() 
+        {
+            event.preventDefault()
+            var numb1 =parseInt( document.getElementById("n1").value);
+            var numb2 = parseInt(document.getElementById("n2").value);
+            var numb3 =parseInt( document.getElementById("n3").value);
+            var numb4 = parseInt(document.getElementById("n4").value);
+            var numb5 =parseInt( document.getElementById("n5").value);
+            var numb6 = parseInt(document.getElementById("n6").value);
+            var numb7 =parseInt( document.getElementById("n7").value);
+            var total=numb1+numb2+numb3+numb4+numb5+numb6+numb7;
+            ans.innerText="Total = "+total+"/700";
+            per.innerText="percentage = "+((total/700)*100)+"%";
+        }
+
+        
+    </script>
+</body>
+
+</html>
