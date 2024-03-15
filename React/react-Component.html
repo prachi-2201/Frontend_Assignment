@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-decoration: underline;
+            color: darkgreen;
+        }
+
+        .note {
+            font-size: 12px;
+            color: red;
+        }
+
+        h1,
+        .note {
+            margin-top: 20px;
+            margin-left: 5px;
+        }
+
+        .qa-container {
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 20px 20px 10px;
+            box-sizing: border-box;
+        }
+
+        .question {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .answer {
+            background-color: #f4f4f4;
+            border-radius: 20px;
+            padding: 15px;
+            font-size: 16px;
+            color: #555;
+            margin: 10px;
+            display: none;
+        }
+
+        pre {
+            white-space: pre-wrap;
+        }
+
+        .slider-container {
+            width: 300px;
+            overflow: hidden;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
+
+        .slide {
+            width: 100%;
+            height: 200px;
+            display: none;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        #slide1 {
+            background-color: #ffcccb;
+        }
+
+        #slide2 {
+            background-color: #b3daff;
+        }
+
+        #slide3 {
+            background-color: #c2f0c2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>React Assignment</h1>
+    <p class="note">Note : CLick on questions to view ansers</p>
+
+    <div class="qa-container">
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(1)">Q.1 What is React Js? </div>
+            <div class="answer" id="answer1">
+                <ul>
+                    <li>React is a JavaScript library created by Facebook</li>
+
+                    <li>React is a User Interface (UI) library</li>
+
+                    <li>React is a tool for building UI components</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(2)">Q.2 What is NPM in React Js?
+            </div>
+            <div class="answer" id="answer2">
+
+                <p><nav></nav>pm is an abbreviation used for the node package manager. It is a package manager for JavaScript. It
+                    is the default package manager that comes with NodeJS when you install it. It consists of a
+                    command-line interface and an online database of public packages and private packages that are paid
+                    which is called the npm Registry.</p>
+
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(3)">Q.3 What is Role of Node Js in react Js?</div>
+            <div class="answer" id="answer3">
+                <p>-Firstly, it seamlessly integrates with the NPM registry, making package installation easy through
+                    the
+                    NPM CLI.
+                    <br>
+                    -Secondly, Node.js can bundle a React application into a single file, simplifying compilation using
+                    tools like webpack and other Node modules
+                </p>
+            </div>
+
+        </div>
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(4)">Q.4 What is CLI command In React Js?</div>
+            <div class="answer" id="answer4">
+                <p>React has its own command-line interface (CLI) commands. However, these CLI commands are currently
+                    only used to create a passable version of a react application using the command line.</p>
+            </div>
+
+        </div>
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(5)">Q.5 What is Components in React Js?</div>
+            <div class="answer" id="answer5">
+                <ul>
+                    <li>Components are independent and reusable bits of code. They serve the same purpose as JavaScript
+                        functions, but work in isolation and return HTML.</li>
+
+                    <li>Components come in two types, Class components and Function components, in this tutorial we will
+                        concentrate on Function components.</li>
+                </ul>
+                <p><b>Class Component</b>
+                    A class component must include the extends React.Component statement. This statement creates an
+                    inheritance to React.Component, and gives your component access to React.Component's functions.
+                    The component also requires a render() method, this method returns HTML.
+                </p>
+                <code>
+                    <pre>
+                        class Car extends React.Component {
+                            render() {
+                              return <h2>Hi, I am a Car!</h2>;
+                            }
+                          }
+                    </pre>
+                </code>
+
+                <p><b>Function Component </b>
+                    Here is the same example as above, but created using a Function component instead.
+                    A Function component also returns HTML, and behaves much the same way as a Class component, but
+                    Function components can be written using much less code, are easier to understand.
+                </p>
+                <code>
+                    <pre>
+                        function Car() {
+                            return <h2>Hi, I am a Car!</h2>;
+                          }
+                    </pre>
+                </code>
+            </div>
+
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(6)">Q.6 What is Header and Content Components in React Js?</div>
+            <div class="answer" id="answer6">
+                <p>
+                    In React.js, "Header" and "Content" components are typically used to structure the layout of a web
+                    application or webpage.
+                <ol>
+                    <li>Header Component: The Header component generally contains elements such as the site logo,
+                        navigation
+                        menus, user login/logout functionality, or any other content that you want to display at the top
+                        of
+                        your webpage. It provides the overall structure and navigation for the page. The Header
+                        component is
+                        usually static across different pages of the application and remains consistent throughout the
+                        user's interaction.</li>
+
+                    <li>Content Component: The Content component represents the main content area of the webpage where
+                        the
+                        primary information or functionality is displayed. It usually varies from page to page,
+                        depending on
+                        the purpose of each page. The Content component might include various subcomponents or sections,
+                        such as articles, posts, forms, or any other relevant content specific to the page's context.
+                    </li>
+                </ol>
+
+
+                </p>
+            </div>
+
+        </div>
+
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(7)">Q.7 How to install React Js on Windows, Linux Operating
+                System? How to
+                install NPM and How to check version of NPM?
+
+            </div>
+            <div class="answer" id="answer7">
+                <ol>
+                    <li>Download Node.js Installer: Go to the Node.js website and download the Windows Installer (.msi).
+                    </li>
+                    <li>Run Installer: Double-click the downloaded .msi file and follow the installation instructions.
+                        Accept the default settings.</li>
+                    <li>Verify Installation: Open Command Prompt and type node -v and npm -v to verify that Node.js and
+                        npm are installed correctly. You should see the versions of Node.js and npm printed in the
+                        console.</li>
+                </ol>
+            </div>
+
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(8)">Q.8 How to check version of React Js?</div>
+            <div class="answer" id="answer8">
+                <p>The package.json contains metadata about our project. It is created by default when we create our
+                    React project. We can create a react app using the command mentioned below. </p>
+                <code>npx create-react-app name_of_the_app</code>
+                <p>The package.json file contains a lot of information in the name/value pairs in JSON format. We can
+                    easily check our React version under the list of dependencies</p>
+            </div>
+
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(9)">Q.9 How to change in components of React Js?</div>
+            <div class="answer" id="answer9">
+                <ul>
+                    <li>React components has a built-in state object.</li>
+                    <li>The state object is where you store property values that belong to the component.</li>
+                    <li>When the state object changes, the component re-renders.</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(10)">Q.10 How to Create a List View in React Js?
+            </div>
+            <div class="answer" id="answer10">
+                <ol>
+                    <li>Define an array of items.</li>
+                    <li>Use the map() method to iterate over the array and create a list of elements.</li>
+                    <li>Render the list of elements in your React component.</li>
+                </ol>
+                <code>
+                    <pre>
+                        import React from 'react';
+
+                        function ListView() {
+                        // Define an array of items
+                        const items = [
+                            { id: 1, name: 'Item 1' },
+                            { id: 2, name: 'Item 2' },
+                            { id: 3, name: 'Item 3' },
+                        ];
+
+                        return (
+                            &lt;div&gt;
+                            &lt;h1&gt; List View&lt;/h1&gt;
+                            {/* Use map() to render the list */}
+                            &lt;ul&gt;
+                                {items.map(item => (
+                                // Use a unique key for each item
+                                &lt;li&gt; key={item.id}>{item.name}&lt;/li&gt;
+                                ))}
+                            &lt;/ul&gt;
+                            &lt;/div&gt;
+                        );
+                        }
+
+                        export default ListView;
+
+                    </pre>
+                </code>
+            </div>
+
+        </div>
+
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(11)">Q.11 Create Increment decrement state change by button click?</div>
+            <div class="answer" id="answer11">
+                <a href="./counter-app/src/App.js"><h3>Click to view <b>Answer</b></h3></a>
+            </div>
+
+        </div>
+
+
+
+      
+
+
+    </div>
+
+
+
+
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById("answer" + id);
+
+            answer.style.display = (answer.style.display === "block" ? "none" : "block");
+            var que = document.querySelectorAll(".question");
+            que[id - 1].style.color = "blue"
+
+        }
+    </script>
+</body>
+
+</html>
