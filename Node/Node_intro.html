@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-decoration: underline;
+            color: darkgreen;
+        }
+
+        .note {
+            font-size: 12px;
+            color: red;
+        }
+
+        h1,
+        .note {
+            margin-top: 20px;
+            margin-left: 5px;
+        }
+
+        .qa-container {
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 20px 20px 10px;
+            box-sizing: border-box;
+        }
+
+        .question {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .answer {
+            background-color: #f4f4f4;
+            border-radius: 20px;
+            padding: 15px;
+            font-size: 16px;
+            color: #555;
+            margin: 10px;
+            display: none;
+        }
+
+        pre {
+            white-space: pre-wrap;
+        }
+
+        .slider-container {
+            width: 300px;
+            overflow: hidden;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
+
+        .slide {
+            width: 100%;
+            height: 200px;
+            display: none;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        #slide1 {
+            background-color: #ffcccb;
+        }
+
+        #slide2 {
+            background-color: #b3daff;
+        }
+
+        #slide3 {
+            background-color: #c2f0c2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Node - Introduction Assignment</h1>
+    <p class="note">Note : CLick on questions to view answers</p>
+
+    <div class="qa-container">
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(1)">Q.1 What is nodejs?</div>
+            <div class="answer" id="answer1">
+                <p>Node.js is an open-source and cross-platform JavaScript runtime environment. It is a popular tool for
+                    almost any kind of project!</p>
+
+                <p>Node.js runs the V8 JavaScript engine, the core of Google Chrome, outside of the browser. This allows
+                    Node.js to be very performant.</p>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(2)">Q. 2 What is v8?</div>
+            <div class="answer" id="answer2">
+                <p>V8 is the name of the JavaScript engine that powers Google Chrome. It's the thing that takes our
+                    JavaScript and executes it while browsing with Chrome. V8 is the JavaScript engine i.e. it parses
+                    and executes JavaScript code.</p>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(3)">Q. 3 Why node-js is used?</div>
+            <div class="answer" id="answer3">
+                <p>Node.js is an open source, a server-side script which runs on the top of Google’s open-source
+                    scripting engine V8. Node.js is fast, lightweight and efficient. It uses the asynchronous mode of
+                    operation, event-driven Input/Output rather than using the traditional threads or separate threads
+                    for each process. Node.js was originally written by Ryan Dahl in the year 2009. It is a
+                    cross-platform Javascript run-time environment that executes Javascript code outside of a browser.
+                    Node.js uses javascript for creating node applications or we can use any other language that
+                    ultimately compiles to javascript (like typescript). The javascript is written in the same way as
+                    we’d use in any client-side application. However, we need to set up the node development
+                    environment.</p>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(4)">Q. 4 Introduction to nodejs</div>
+            <div class="answer" id="answer4">
+                <p> Node.js is a powerful, open-source, server-side JavaScript runtime environment that allows
+                    developers to
+                    build scalable and high-performance web applications. Originally created by Ryan Dahl in 2009,
+                    Node.js
+                    has since become one of the most popular frameworks for building server-side applications,
+                    particularly
+                    for real-time web applications and APIs.</p>
+
+                <p>Here's a basic introduction to Node.js:</p>
+
+                <ul>
+                    <li><b>JavaScript Runtime:</b> Node.js allows developers to execute JavaScript code on the
+                        server-side, outside the
+                        confines of a web browser. This means that developers can use JavaScript for both client-side
+                        and
+                        server-side development, providing a more consistent and seamless development experience.</li>
+
+                    <li><b>Event-Driven Architecture:</b> Node.js is built on an event-driven, non-blocking I/O model,
+                        which means that
+                        it is highly efficient and can handle a large number of concurrent connections without the need
+                        for
+                        threading. This makes Node.js particularly well-suited for building real-time applications, such
+                        as chat
+                        applications or multiplayer games.</li>
+
+                    <li><b>V8 JavaScript Engine:</b> Node.js is powered by the V8 JavaScript engine, which is the same
+                        engine used by
+                        Google Chrome. This engine compiles JavaScript code into machine code, allowing Node.js to
+                        execute
+                        JavaScript code with impressive speed and efficiency.</li>
+
+                    <li><b>NPM (Node Package Manager):</b> NPM is the default package manager for Node.js, providing
+                        access to a vast
+                        ecosystem of open-source libraries and tools that can be easily integrated into Node.js
+                        projects. This
+                        makes it easy for developers to leverage existing code and accelerate the development process.
+                    </li>
+
+                    <li><b>Single-Threaded, Non-Blocking:</b> Node.js uses a single-threaded event loop architecture,
+                        which means that
+                        it can handle multiple requests concurrently without spawning additional threads. This makes it
+                        lightweight and efficient, particularly for I/O-heavy applications.</li>
+
+                    <li><b>Cross-Platform:</b> Node.js is cross-platform, meaning that it can run on various operating
+                        systems,
+                        including Windows, macOS, and Linux. This makes it versatile and accessible for developers
+                        working on
+                        different platforms.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(5)">Q. 5 Nodejs versions</div>
+            <div class="answer" id="answer5">
+
+                <ul>
+                    <li>Node.js 0.10.x: This was one of the early stable versions of Node.js, featuring basic
+                        capabilities for
+                        building server-side applications.</li>
+
+                    <li> Node.js 0.12.x: This version introduced significant improvements and features, including better
+                        Windows
+                        support, performance enhancements, and updates to the V8 engine.</li>
+
+                    <li> Node.js 4.x (LTS): Node.js 4.x was the first version to follow the Long-Term Support (LTS)
+                        schedule,
+                        which meant it received maintenance updates and security fixes for an extended period. It
+                        included
+                        significant updates to JavaScript language features and improvements to core modules.</li>
+
+                    <li>Node.js 6.x (LTS): Building upon the foundation of Node.js 4.x, version 6.x brought even more
+                        stability,
+                        performance improvements, and new features. It also marked the beginning of a regular release
+                        cycle for
+                        LTS versions.</li>
+
+                    <li>Node.js 8.x (LTS): Node.js 8.x introduced several important features, including async/await
+                        support,
+                        improvements to the npm package manager, and enhancements to the core APIs.</li>
+
+                    <li> Node.js 10.x (LTS): This version included updates to the V8 engine, performance improvements,
+                        and new
+                        features such as N-API (a stable Node.js API for native modules) and HTTP/2 support.</li>
+
+                    <li>Node.js 12.x (LTS): Node.js 12.x continued to improve performance and stability while
+                        introducing
+                        features like ES6 module support, TLS improvements, and enhancements to the Worker Threads API
+                        for
+                        multithreading.</li>
+
+                    <li>Node.js 14.x (LTS): Node.js 14.x brought significant improvements to diagnostic reporting,
+                        better
+                        support for ECMAScript modules (ESM), and updates to the V8 engine.</li>
+
+                    <li> Node.js 16.x (LTS): The latest LTS version as of my last update, Node.js 16.x, continued to
+                        refine
+                        performance, stability, and developer experience. It included features like improved ECMAScript
+                        module
+                        support, updated npm, and better diagnostics.</li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(6)">Q. 6 Nodejs history</div>
+            <div class="answer" id="answer6">
+                <p>Node.js was initially written by Ryan Dahl in 2009, about 13 years after the introduction of the
+                    first server-side JavaScript environment, Netscape's LiveWire Pro Web. The initial release
+                    supported only Linux and Mac OS X. Its development and maintenance was led by Dahl and later
+                    sponsored by Joyent.</p>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById("answer" + id);
+
+            answer.style.display = (answer.style.display === "block" ? "none" : "block");
+            var que = document.querySelectorAll(".question");
+            que[id - 1].style.color = "blue"
+
+        }
+    </script>
+</body>
+
+</html>
