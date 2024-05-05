@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "express": "^4.19.2",
-    "node": "^22.0.0",
+    "mongodb": "^6.6.0",
+    "node": "^22.1.0",
     "pug": "^3.0.2"
   }
 }
