@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-decoration: underline;
+            color: darkgreen;
+        }
+
+        .note {
+            font-size: 12px;
+            color: red;
+        }
+
+        h1,
+        .note {
+            margin-top: 20px;
+            margin-left: 5px;
+        }
+
+        .qa-container {
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 20px 20px 10px;
+            box-sizing: border-box;
+        }
+
+        .question {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .answer {
+            background-color: #f4f4f4;
+            border-radius: 20px;
+            padding: 15px;
+            font-size: 16px;
+            color: #555;
+            margin: 10px;
+            display: none;
+        }
+
+        pre {
+            white-space: pre-wrap;
+        }
+
+        .slider-container {
+            width: 300px;
+            overflow: hidden;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
+
+        .slide {
+            width: 100%;
+            height: 200px;
+            display: none;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        #slide1 {
+            background-color: #ffcccb;
+        }
+
+        #slide2 {
+            background-color: #b3daff;
+        }
+
+        #slide3 {
+            background-color: #c2f0c2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>List & Hooks Assignment</h1>
+    <p class="note">Note : CLick on questions to view ansers</p>
+
+    <div class="qa-container">
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(1)">Q.1 What is Redux?
+            </div>
+            <div class="answer" id="answer1">
+                <p>Redux is a predictable state container for JavaScript apps. It helps manage the state of your
+                    application in a centralized store, making state management easier and more predictable, especially
+                    in large-scale applications.
+                    <br>
+                    It operates with a unidirectional data flow, meaning data flows in one direction within your
+                    application, making it easier to understand and debug.
+                </p>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(2)">Q.2 What is Redux Thunk used for?
+            </div>
+            <div class="answer" id="answer2">
+                <p>Redux Thunk is a middleware for Redux that allows you to write asynchronous logic that interacts with
+                    the Redux store.
+                    <br>
+                    It is commonly used to handle asynchronous actions in Redux, such as making API calls, by allowing
+                    action creators to return functions instead of plain objects.
+                    <br>
+                    This enables you to perform asynchronous operations before dispatching actions, giving you more
+                    control over the flow of data in your Redux application.
+                </p>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(3)">Q.3 What is Pure Component? When to use Pure Component over
+                Component?
+            </div>
+            <div class="answer" id="answer3">
+                <p>A Pure Component is a component in React that implements the shouldComponentUpdate method with a
+                    shallow prop and state comparison.
+                    <br>
+                    It ensures that the component only re-renders when its props or state have changed. If the shallow
+                    comparison indicates that the props and state are the same, the component won't re-render.
+                    <br>
+                    Use Pure Components when you want to optimize performance by reducing unnecessary re-renders. They
+                    are particularly useful when dealing with large lists or deeply nested component trees where
+                    re-rendering can be costly.
+                </p>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <div class="question" onclick="toggleAnswer(4)">Q.4 What is the second argument that can optionally be
+                passed tosetState and what is
+                its purpose?
+            </div>
+            <div class="answer" id="answer4">
+                <p>The second argument that can optionally be passed to setState in React is a callback function that
+                    will be executed once setState has been completed and the component has been re-rendered.
+                    <br>
+                    This callback function is often used to perform actions that depend on the updated state or to
+                    execute code after the component has been re-rendered.
+                    <br>
+                    It's particularly useful for scenarios where you need to perform actions after the state has been
+                    updated and reflected in the UI, such as fetching data from an API or manipulating the DOM based on
+                    the updated state.
+                </p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById("answer" + id);
+
+            answer.style.display = (answer.style.display === "block" ? "none" : "block");
+            var que = document.querySelectorAll(".question");
+            que[id - 1].style.color = "blue"
+
+        }
+    </script>
+</body>
+
+</html>
